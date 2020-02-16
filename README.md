@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Public and SRC folders are all you would need to run
-// NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is old
-//Use ctrL + C to stop the server
-//Always run NPM INSTALL on a newly cloned file
+### 'NPM RUN CLIENT' is the updated src folder, (### 'NPM RUN SERVER/NPM START') runs build in my case which is old
+//Use ### 'ctrL + C' to stop the server
+//Always ### 'run NPM INSTALL' on a newly cloned file
 //Do not push updates to master branch, push to your own branch PLZ
 
 
