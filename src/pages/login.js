@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function login() {
   return (
-    <div>
+    <div className="login">
       <h1>Login</h1>
       <ul className="header">
         <li>
