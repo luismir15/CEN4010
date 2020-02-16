@@ -1,26 +1,26 @@
 body {
-  background-color: #5cdb95;
+  /* background-color: #5cdb95; */
   padding: 20px;
   margin: 0;
 }
-h1,
-h2,
-p,
-ul,
-li {
+.home h1,
+.home h2,
+.home p,
+.home ul,
+.home li {
   font-family: sans-serif;
   color: #05386b;
 }
-ul.header li {
+.home ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
 }
-ul.header {
+.home ul.header {
   background-color: #379683;
   padding: 0;
 }
-ul.header li a {
+.home ul.header li a {
   color: #05386b;
   font-weight: bold;
   text-decoration: none;
@@ -35,3 +35,35 @@ ul.header li a {
 .content li {
   margin-bottom: 10px;
 }
+
+/**********BOOK DETAILS CSS********************/
+
+.details
+{
+  font-family: Lato;
+}
+
+.details-img
+{
+  height: 400px;
+
+}
+
+.details-description
+{
+}
+
+.details-authorBio
+{
+}
+
+.details-Basics
+{
+}
+
+
+
+
+
+
+ /*********************************************/

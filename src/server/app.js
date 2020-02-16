@@ -26,8 +26,6 @@ mongoose
 	.then(() => console.log('MongoDB Connected...'))
 	.catch(err => console.log(err));
 
-// Use Routes
-app.use('/api/books', books);
 
 // Port for DB
 const port = process.env.PORT || 3002;
@@ -41,6 +39,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/books', books);
 
 // app.get('/*', (req, res, next) => {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
