@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Public and SRC folders are all you would need to run
+// NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green page
+//Use ctrL + C to stop the server
+//Always run NPM INSTALL on a newly cloned file
+//Do not push updates to master branch, push to your own branch PLZ
+
+
 ## Available Scripts
 
 In the project directory, you can run:
