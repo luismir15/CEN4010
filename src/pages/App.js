@@ -13,6 +13,7 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
 //Do not push updates to master branch, push to your own branch PLZ
+//orginized my folders 2/17/20
 
 function App() {
   return (
