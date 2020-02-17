@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 will run the updated src folder
 ### NPM RUN SERVER/NPM START
 runs build in my case which is the old template
-### ctrL + C 
+### CTRL + C 
 To stop the server
 ### run NPM INSTALL 
 Always on a newly cloned file
