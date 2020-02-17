@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
 //useful for when you make calls to the api -- helps open a gateway to collect information
