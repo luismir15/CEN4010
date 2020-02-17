@@ -9,11 +9,14 @@ import ShopCart from './ShopCart';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
 
-// NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green page
+// NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
 //Do not push updates to master branch, push to your own branch PLZ
-//orginized my folders 2/17/20
+
+//updated file structure on my branch (miguel) 2/17/20
+//npm install after downloading/ npm install --save react-bootstrap mighe be needed for BookDetails to work
+//npm npm run client to run this package
 
 function App() {
   return (
@@ -60,9 +63,7 @@ function App() {
           <Route path="/Register" component={Register} />
           <Route path="/Login" component={Login} />
           <Route path="/Orders" component={Orders} />
-          <Route path="/booDetails" component={BookDetails} />
-          {/* BOOK DETAIL not working / check with Christian*/}
-
+          <Route path="/BookDetails" component={BookDetails} />
           <Route path="/ShopCart" component={ShopCart} />
 
         </div>
