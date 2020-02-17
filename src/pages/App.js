@@ -13,6 +13,7 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
 //Do not push updates to master branch, push to your own branch PLZ
+//BookDetails link fixed 2/16
 
 function App() {
   return (
@@ -60,8 +61,6 @@ function App() {
           <Route path="/Login" component={Login} />
           <Route path="/Orders" component={Orders} />
           <Route path="/BookDetails" component={BookDetails} />
-          {/* BOOK DETAIL not working / check with Christian*/}
-
           <Route path="/ShopCart" component={ShopCart} />
 
         </div>
