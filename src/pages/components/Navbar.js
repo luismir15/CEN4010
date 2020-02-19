@@ -28,6 +28,7 @@ class Navbar extends Component {
             <Navitem item="Login" tolink="/login"  activec={this.activeitem}></Navitem>
             <Navitem item="Orders" tolink="/orders"  activec={this.activeitem}></Navitem>
             <Navitem item="Book Details" tolink="/bookdetails"  activec={this.activeitem}></Navitem>
+            <i class="material-icons md-dark md-24">shopping_cart</i>
             <SearchField placeholder='Search item'/>
             </ul>
             </nav>

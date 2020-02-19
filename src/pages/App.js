@@ -31,20 +31,22 @@ function App() {
           <h1><i class="material-icons">menu_book</i> GeekText</h1>
         </NavLink>
 
-        {/*<Navbar />*/}
+        <ul className = "header">
+          <Navbar />
+        </ul>
 
         {/* styles this section with css*/}
-        <ul className="header">
+        {/*<ul className="header">
 
           <li><NavLink exact to="/">Home</NavLink></li>
 
-          {/* search bar*/}
-          {/*<input type="text" />
-          <button type="submit">Submit</button>*/}
+          
+          <input type="text" />
+          <button type="submit">Submit</button>
 
-          {/* search bar with database integration built*/}
-          {/* <input onchange={this.props.handleSearch} type="text"/>
-          <button type="submit">Submit</button> */}
+          search bar with database integration built
+          <input onchange={this.props.handleSearch} type="text"/>
+          <button type="submit">Submit</button> 
 
           <li><NavLink to="/Register">Register</NavLink></li>
           <li><NavLink to="/Login">Login</NavLink></li>
@@ -59,7 +61,7 @@ function App() {
           </li>
 
           
-        </ul>
+        </ul>*/}
 
         {/* styles this section with css*/}
         <div className="content">
