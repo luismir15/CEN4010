@@ -22,9 +22,9 @@ const db = require('./config/keys').mongoURI;
 
 // Connect to DB (Mongo)
 mongoose
-	.connect(db)
-	.then(() => console.log('MongoDB Connected...'))
-	.catch(err => console.log(err));
+    .connect(db)
+    .then(() => console.log('MongoDB Connected...'))
+    .catch(err => console.log(err));
 
 // Use Routes
 app.use('/api/books', books);
