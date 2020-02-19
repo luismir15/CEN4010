@@ -6,7 +6,9 @@ import Login from './content/Login';
 import Orders from './content/Orders';
 import BookDetails from './content/BookDetails';
 import ShopCart from './content/ShopCart';
+import Navbar from './components/Navbar';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
+
 
 
 // NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
@@ -29,14 +31,16 @@ function App() {
           <h1><i class="material-icons">menu_book</i> GeekText</h1>
         </NavLink>
 
+        {/*<Navbar />*/}
+
         {/* styles this section with css*/}
         <ul className="header">
 
           <li><NavLink exact to="/">Home</NavLink></li>
 
           {/* search bar*/}
-          <input type="text" />
-          <button type="submit">Submit</button>
+          {/*<input type="text" />
+          <button type="submit">Submit</button>*/}
 
           {/* search bar with database integration built*/}
           {/* <input onchange={this.props.handleSearch} type="text"/>
@@ -54,6 +58,7 @@ function App() {
             </NavLink>
           </li>
 
+          
         </ul>
 
         {/* styles this section with css*/}
