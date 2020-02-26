@@ -1,33 +1,37 @@
 // Requires
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const config = require('config');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const books = require('./routes/api/books');
-
 // Express instance
 const app = express();
 
-// Bodyparser middleware
-app.use(bodyParser.json());
+// Built in express parser
+app.use(express.json());
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 
 // Connect to DB (Mongo)
 mongoose
-    .connect(db)
-    .then(() => console.log('MongoDB Connected...'))
-    .catch(err => console.log(err));
+	.connect(db, {
+		useNewUrlParser: true,
+		useCreateIndex: true,
+		useUnifiedTopology: true
+	})
+	.then(() => console.log('MongoDB Connected...'))
+	.catch(err => console.log(err));
 
 // Use Routes
-app.use('/api/books', books);
+app.use('/api/books', require('./routes/api/books'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 // Port for DB
 const port = process.env.PORT || 3002;
