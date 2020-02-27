@@ -143,60 +143,58 @@ ul.header li a {
 
 .details
 {
-  font-family: Lato;
 }
+
 
 .details-img
 {
-  height: 400px;
+  height: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.details-img-col{
+    height: 400px;
 }
 
 .details-description
 {
+  background-color: #F0F0F0;
+  padding: 25px 50px 25px 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.centering
+{
+  /* background-color: red;
+  font-family: serif;
+  text-align: center;
+  /* display: inline-block; */
 }
 
 .details-authorBio
 {
+  background-color: #ffcc00;
+  padding: 25px 50px 25px 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .details-Basics
 {
 }
 
-
-
-
-
-
- /*********************************************//**********BOOK DETAILS CSS********************/
-
-.details
-{
-  font-family: Lato;
+.details li {
+  list-style-type: none;
+}
+.details ul {
+  padding-left: 0;
+  padding: 18px 0px 0px 0px;
 }
 
-.details-img
-{
-  height: 300px;
-
+.addtoCartBtn {
+  float: right;
 }
-
-.details-description
-{
-}
-
-.details-authorBio
-{
-}
-
-.details-Basics
-{
-}
-
-
-
-
-
-
- /*********************************************/
