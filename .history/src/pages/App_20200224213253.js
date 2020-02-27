@@ -16,7 +16,7 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //Do not push updates to master branch, push to your own branch PLZ
 
 //updated file structure on my branch (miguel) 2/17/20
-//npm install after downloading/ npm install --save react-bootstrap may be needed for BookDetails to work
+//npm install after downloading/ npm install --save react-bootstrap mighe be needed for BookDetails to work
 //npm npm run client to run this package
 
 function App() {

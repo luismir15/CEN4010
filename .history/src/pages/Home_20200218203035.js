@@ -14,9 +14,9 @@ class Home extends Component {
             .then( success => {
                 console.log('do something with success')
             })
-            .catch( error => {
+            .error( error => {
                 console.log('handle the error that the backend sends.')
-            });
+            })
         Axios.get("/books")
             .then( response => {
                 this.setState({

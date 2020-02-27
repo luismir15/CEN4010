@@ -1,10 +1,9 @@
 import React from 'react';
 import './index.css';
 import Home from './Home';
-import Library from './Library';
+import Register from './Register';
 import Login from './Login';
-import Help from './Help';
-import WishList from './WishList';
+import Orders from './Orders';
 import BookDetails from './BookDetails';
 import ShopCart from './ShopCart';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
@@ -16,7 +15,7 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //Do not push updates to master branch, push to your own branch PLZ
 
 //updated file structure on my branch (miguel) 2/17/20
-//npm install after downloading/ npm install --save react-bootstrap may be needed for BookDetails to work
+//npm install after downloading/ npm install --save react-bootstrap mighe be needed for BookDetails to work
 //npm npm run client to run this package
 
 function App() {
@@ -43,11 +42,10 @@ function App() {
           {/* <input onchange={this.props.handleSearch} type="text"/>
           <button type="submit">Submit</button> */}
 
-          <li><NavLink to="/Library">Library</NavLink></li>
-          <li><NavLink to="/WishList">Wish List</NavLink></li>
+          <li><NavLink to="/Register">Register</NavLink></li>
           <li><NavLink to="/Login">Login</NavLink></li>
-          <li><NavLink to="/Help">Help</NavLink></li>
-          {/* <li><NavLink to="/BookDetails">Book Details</NavLink></li> */}
+          <li><NavLink to="/Orders">Orders</NavLink></li>
+          <li><NavLink to="/BookDetails">Book Details</NavLink></li>
 
 
           <li>
@@ -62,11 +60,10 @@ function App() {
         <div className="content">
 
           <Route exact path="/" component={Home} />
-          <Route path="/Library" component={Library} />
-          <Route path="/WishList" component={WishList} />
+          <Route path="/Register" component={Register} />
           <Route path="/Login" component={Login} />
-          <Route path="/Help" component={Help} />
-          {/* <Route path="/BookDetails" component={BookDetails} /> */}
+          <Route path="/Orders" component={Orders} />
+          <Route path="/BookDetails" component={BookDetails} />
           <Route path="/ShopCart" component={ShopCart} />
 
         </div>

@@ -1,33 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import Axios from "axios";
-
 
 class Home extends Component {
-
-    state = {
-        books: []
-    }
-
-    componentDidMount(){
-        Axios.post("/books", { query: "Humor"})
-            .then( success => {
-                console.log('do something with success')
-            })
-            .catch( error => {
-                console.log('handle the error that the backend sends.')
-            });
-        Axios.get("/books")
-            .then( response => {
-                this.setState({
-                    books: response.books
-                })
-            })
-            .catch(err => {
-                console.log('error getting books', err)
-            })
-    }
-
     render() {
         return (
             <div>

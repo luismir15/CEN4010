@@ -10,13 +10,6 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        Axios.post("/books", { query: "Humor"})
-            .then( success => {
-                console.log('do something with success')
-            })
-            .catch( error => {
-                console.log('handle the error that the backend sends.')
-            });
         Axios.get("/books")
             .then( response => {
                 this.setState({
