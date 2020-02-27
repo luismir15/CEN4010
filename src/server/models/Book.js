@@ -34,6 +34,18 @@ const BookSchema = new Schema({
 	rating: {
 		type: Number,
 		required: true
+	},
+	isbn: {
+		type: String,
+		required: true
+	},
+	price: {
+		type: Number,
+		required: true
+	},
+	image: {
+		type: String,
+		required: true
 	}
 });
 

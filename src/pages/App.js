@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.css';
-import Home from './Home';
-import Register from './Register';
-import Login from './Login';
+import Home from './home';
+import Register from './register';
+import Login from './login';
 import Orders from './Orders';
 import BookDetails from './BookDetails';
 import ShopCart from './ShopCart';
