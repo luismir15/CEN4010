@@ -6,7 +6,7 @@ class Register extends Component {
   render() {
     return (
       <div>
-        <h1 id="registration">Register</h1>
+        <h1 id="registration">Register Here</h1>
         <div class='loginlink'>
           <Link to="/Login" id='registration'>Already registered? Login here!</Link>
         </div>

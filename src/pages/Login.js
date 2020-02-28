@@ -12,7 +12,7 @@ class Login extends Component {
         </div>
         <br />
         <form id="login">
-          <label>
+          <label class='label'>
             Email:
           <br />
             <input
@@ -25,7 +25,7 @@ class Login extends Component {
           </label>
           <br />
           <br />
-          <label>
+          <label class='label'>
             Password:
           <br />
             <input
