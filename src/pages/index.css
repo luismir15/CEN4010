@@ -1,202 +1,183 @@
 body {
-  background-color: #ffcc00;
-  padding: 20px;
-  margin: 0;
+	background-color: #ffcc00;
+	padding: 20px;
+	margin: 0;
 }
 h1,
 h2,
 p,
 ul,
 li {
-  font-family: sans-serif;
-  color: #000000;
+	font-family: sans-serif;
+	color: #000000;
 }
 ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 35px;
+	display: inline;
+	list-style-type: none;
+	margin: 35px;
 }
 ul.header {
-  background-color: #111;
-  padding: 0;
+	background-color: #111;
+	padding: 0;
 }
 ul.header li a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 15px;
-  display: inline-block;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 15px;
+	display: inline-block;
 }
 
 .content {
-  background-color: #FFF;
-  padding: 20px;
+	background-color: #fff;
+	padding: 20px;
 }
 
 .content h2 {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 .content li {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 /* Miguel M. From here my css starts */
 .active {
-  /* active page indicator //background-color: rgb(55, 107, 141); */
-  border-bottom: 4px solid white ;
+	/* active page indicator //background-color: rgb(55, 107, 141); */
+	border-bottom: 4px solid white;
 }
 
 .flexbox-container {
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .flexbox-item {
-  width: 200px;
-  margin: 8px;
-  border: 4px solid #333;
-  background-color: #dfdfdf;
+	width: 200px;
+	margin: 8px;
+	border: 4px solid #333;
+	background-color: #dfdfdf;
 }
 
 .flexbox-item-1 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .flexbox-item-2 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .flexbox-item-3 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .flexbox-item-4 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .flexbox-item-5 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .flexbox-item-6 {
-  max-height: 300px;
+	max-height: 300px;
 }
 
 .book-wrapper {
-  text-align: center;
+	text-align: center;
 }
 
 .fit-container {
-  width: 100%;
+	width: 100%;
 }
 
 /* google fonts or icons req */
 @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot);
-  /* For IE6-8 */
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot);
+	/* For IE6-8 */
+	src: local('Material Icons'), local('MaterialIcons-Regular'),
+		url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+		url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+		url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 36px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 36px;
+	/* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 .material-icons.orange600 {
-  color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
 
 .material-icons.md-dark {
-  color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
 
 .material-icons.md-dark.md-inactive {
-  color: rgb(244, 244, 244);
+	color: rgb(244, 244, 244);
 }
 
 /*^^ Miguel M. Contribution ends here ^^*/
 
 /**********BOOK DETAILS CSS********************/
 
-.details
-{
-  font-family: Lato;
+.details {
+	font-family: Lato;
 }
 
-.details-img
-{
-  height: 400px;
-
+.details-img {
+	height: 400px;
 }
 
-.details-description
-{
+.details-description {
 }
 
-.details-authorBio
-{
+.details-authorBio {
 }
 
-.details-Basics
-{
+.details-Basics {
 }
 
+/*********************************************/ /**********BOOK DETAILS CSS********************/
 
-
-
-
-
- /*********************************************//**********BOOK DETAILS CSS********************/
-
-.details
-{
-  font-family: Lato;
+.details {
+	font-family: Lato;
 }
 
-.details-img
-{
-  height: 300px;
-
+.details-img {
+	height: 300px;
 }
 
-.details-description
-{
+.details-description {
 }
 
-.details-authorBio
-{
+.details-authorBio {
 }
 
-.details-Basics
-{
+.details-Basics {
 }
 
-
-
-
-
-
- /*********************************************/
+/*********************************************/
