@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import { Container } from "react-bootstrap/lib/Tab";
+import { Container } from "react-bootstrap/lib/Tab";
 import {Container, Row, Col, Button, Image} from 'react-bootstrap';
  
 class ShopCart extends React.Component {
@@ -7,16 +7,18 @@ class ShopCart extends React.Component {
     super(props);
     this.state = {
       title: "Harry Potter and the Cursed Child - Parts I & II",
-      price: "17.99"
-
+      author: "by " + "J. K. Rowling, John Tiffany, Jack Thorne",
+      isbn: "9781338099133",
+      price: "$17.99",
+      publisher: "Scholastic, Inc.",
+      releaseDate: "07/31/2016",
+      genre: "Fiction",
+      description: "The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, John Tiffany, and Jack Thorne, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be...",
+      authorBio: "J.K. Rowling is the author of the seven Harry Potter novels, which have sold over 450 million copies and have been translated into 79 languages, and three companion books originally published for charity. She is also the author of The Casual Vacancy, a novel for adults published in 2012, and, under the pseudonym of Robert Galbraith, is the author of the Cormoran Strike crime series. J.K. Rowling is making her screenwriting debut and is a producer on the film Fantastic Beasts and Where to Find Them, a further extension of the Wizarding World, due for release...",
+      image: "https://images-na.ssl-images-amazon.com/images/I/71zWjTSsq1L.jpg",
+      reviews: []
     };
   }
-  
-  
-  
-  
-  
-  
   render() {
     return (
       <Container className="details">
@@ -38,8 +40,7 @@ class ShopCart extends React.Component {
         <ol>
           <li>Order list</li>
           <li>Favorites</li>
-          <li>etc</li>
-          <li>etc</li>
+
         </ol>
       </div>
       </Row>
