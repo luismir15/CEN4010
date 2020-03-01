@@ -435,8 +435,8 @@ margin-bottom: 10px; */
 }
 
 .cartbox-item {
-  max-width: 50px;
-  margin: 5px;
+  width: 200px;
+  margin: 8px;
   border: 4px solid #333;
   background-color: #dfdfdf;
 }
@@ -455,7 +455,7 @@ p.total {
 }
 
 
-.flexbox-item {
+/* .flexbox-item {
   width: 200px;
   margin: 8px;
   border: 4px solid #333;
@@ -464,4 +464,4 @@ p.total {
 
 .flexbox-item-1 {
   max-height: 300px;
-}
+} */

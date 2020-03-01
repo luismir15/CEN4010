@@ -431,19 +431,19 @@ margin-bottom: 10px; */
 }
 
 .cartbox-item-1 {
-  max-height: 50px;
+  max-height: 80px;
 }
 
 .cartbox-item {
-  max-width: 50px;
+  max-width: 70px;
   margin: 5px;
-  border: 4px solid #333;
+  border: 2px solid #333;
   background-color: #dfdfdf;
 }
 
 .cartImage-container {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
 }
 p.total {
   font-size: 20px;
@@ -452,16 +452,4 @@ p.total {
 
 .cart-wrapper {
  padding: 20px;
-}
-
-
-.flexbox-item {
-  width: 200px;
-  margin: 8px;
-  border: 4px solid #333;
-  background-color: #dfdfdf;
-}
-
-.flexbox-item-1 {
-  max-height: 300px;
 }
