@@ -6,6 +6,7 @@ const api = require('axios');
  
 class ShopCart extends React.Component {
   constructor(props) {
+<<<<<<< HEAD
 	super(props);
 	this.state = {
 	  title: "Harry Potter and the Cursed Child - Parts I & II",
@@ -67,6 +68,50 @@ class ShopCart extends React.Component {
 	
 	  
 	);
+=======
+    super(props);
+    this.state = {
+      title: "Harry Potter and the Cursed Child - Parts I & II",
+      author: "by " + "J. K. Rowling, John Tiffany, Jack Thorne",
+      isbn: "9781338099133",
+      price: "$17.99",
+      publisher: "Scholastic, Inc.",
+      releaseDate: "07/31/2016",
+      genre: "Fiction",
+      description: "The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, John Tiffany, and Jack Thorne, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be...",
+      authorBio: "J.K. Rowling is the author of the seven Harry Potter novels, which have sold over 450 million copies and have been translated into 79 languages, and three companion books originally published for charity. She is also the author of The Casual Vacancy, a novel for adults published in 2012, and, under the pseudonym of Robert Galbraith, is the author of the Cormoran Strike crime series. J.K. Rowling is making her screenwriting debut and is a producer on the film Fantastic Beasts and Where to Find Them, a further extension of the Wizarding World, due for release...",
+      image: "https://images-na.ssl-images-amazon.com/images/I/71zWjTSsq1L.jpg",
+      reviews: []
+    };
+  }
+  render() {
+    return (
+      <Container className="details">
+
+<Row className="details-buttons">
+                <Col className="addtoCartBtn" xs={6}>
+                  <Button variant="primary" size="sm" block>ADD TO CART</Button>
+                </Col>
+
+                <Col className="addtoWishlistBtn" xs={6}>
+                  <Button variant="light" size="sm" block>ADD TO WISHLIST</Button>
+                </Col>
+            </Row>
+
+    <Row>
+      <div>
+        <h1>Shopping Cart</h1>
+        <p> image test</p>
+        <ol>
+          <li>Order list</li>
+          <li>Favorites</li>
+
+        </ol>
+      </div>
+      </Row>
+      </Container>
+    );
+>>>>>>> 359c7bbc0abe6d22ab97e0cfe9924519e0a04c90
   }
 }
  
