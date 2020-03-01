@@ -365,12 +365,12 @@ margin-bottom: 10px; */
 }
 /* ------------------Miguel Help page---------------------- */
 .jumbotron {
-  background: #101010;
+  background: #4f4f4f;
   color: #FFF;
   border-radius: 0px;
   }
-  .jumbotron-sm { padding-top: 10px;
-  padding-bottom: 10px; }
+  .jumbotron-sm { padding-top: 24px;
+  padding-bottom: 24px; }
   .jumbotron small {
   color: #FFF;
   }

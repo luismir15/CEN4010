@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './index.css';
 
 //regis
@@ -11,7 +11,7 @@ class Register extends Component {
         <div class='loginlink'>
           <Link to="/Login" id='registration'>Already registered? Login here!</Link>
         </div>
-        <br /> 
+        <br />
         <form id="registration">
           <label>
             First Name:

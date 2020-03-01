@@ -41,7 +41,7 @@ ul.header li a {
   margin-bottom: 5px;
 }
 
-/************ Miguel M. From here my css starts *************/
+/* Miguel M. From here my css starts */
 .active {
   /* active page indicator //background-color: rgb(55, 107, 141); */
   border-bottom: 4px solid white ;
@@ -139,7 +139,7 @@ ul.header li a {
 
 /*^^ Miguel M. Contribution ends here ^^*/
 
-/**********Christian BOOK DETAILS CSS********************/
+/**********BOOK DETAILS CSS********************/
 
 .details
 {
@@ -199,7 +199,7 @@ ul.header li a {
   float: right;
 }
 
-/* --------------------Miguel For book Rating------------- */
+/* --------------------For book Rating------------- */
 
 *{
   margin: 0;
@@ -242,7 +242,7 @@ ul.header li a {
 }
 
 
-/* --------------Miguel For comments-------------- */
+/* --------------For comments-------------- */
 body{
   background-color: #ffcc00;
 }
@@ -324,7 +324,7 @@ margin-bottom: 10px; */
   overflow: hidden;
 }
 
-/* -------------Miguel Search Box------------- */
+/* -------------Search Box------------- */
 
 #custom-search-form {
   margin:0;
@@ -363,20 +363,6 @@ margin-bottom: 10px; */
 .search-query:focus + button {
   z-index: 3;   
 }
-/* ------------------Miguel Help page---------------------- */
-.jumbotron {
-  background: #101010;
-  color: #FFF;
-  border-radius: 0px;
-  }
-  .jumbotron-sm { padding-top: 10px;
-  padding-bottom: 10px; }
-  .jumbotron small {
-  color: #FFF;
-  }
-  .h1 small {
-  font-size: 24px;
-  }
 
 /* ------------------Eugenio Login/Register---------------------- */
 #registration {
@@ -414,7 +400,7 @@ margin-bottom: 10px; */
 	color: black;
 	padding: 5px 80px;
 	text-decoration: none;
-	margin: 4px 2px;
+	margin: 30px 2px;
 	cursor: pointer;
 	font-size: 1rem;
 }

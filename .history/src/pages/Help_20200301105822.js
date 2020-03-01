@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import './index.css';
+import {Container, Row, Col, Button, Image} from 'react-bootstrap';
 
 class Help extends Component {
   render() {
     return (
-
-      <div>
           <div class="jumbotron jumbotron-sm">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <h1 class="h1">
-                            Need Help? <small>Contact us</small></h1>
+                            Contact us <small>Feel free to contact us</small></h1>
                     </div>
                 </div>
             </div>
@@ -34,7 +33,7 @@ class Help extends Component {
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"/></div>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">
@@ -63,29 +62,26 @@ class Help extends Component {
                         </form>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <form>
+                <div class="col-md-4"/>
+                    <form/>
                     <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
                     <address>
-                        <strong>GeekText, Inc.</strong>
-                        <p>
-                        1401 Brickell Ave, Suite 630
-                        iami, FL 33131</p>
+                        <strong>Twitter, Inc.</strong><br>
+                        795 Folsom Ave, Suite 600</br>
+                        San Francisco, CA 94107<br>
                         <abbr title="Phone">
                             P:</abbr>
-                        (1-800) 534-Geek
+                        (123) 456-7890
+                    </br>
                     </address>
                     <address>
-                        <strong>GeekText Support</strong><p>
-                        <a href="mailto:#">Support@geektext.com</a>
-                        </p>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">first.last@example.com</a>
+                    </br>
                     </address>
-                    </form>
                 </div>
             </div>
-        </div>
-   </div>
-
+       
     );
   }
 }

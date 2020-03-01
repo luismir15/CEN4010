@@ -11,7 +11,7 @@ class Help extends Component {
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <h1 class="h1">
-                            Need Help? <small>Contact us</small></h1>
+                            Need Help? Contact us <small>Contact us</small></h1>
                     </div>
                 </div>
             </div>

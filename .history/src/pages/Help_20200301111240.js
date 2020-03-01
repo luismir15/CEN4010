@@ -11,7 +11,7 @@ class Help extends Component {
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <h1 class="h1">
-                            Need Help? <small>Contact us</small></h1>
+                            Contact us <small>Feel free to contact us</small></h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ class Help extends Component {
                                 <div class="form-group">
                                     <label for="name">
                                         Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                    <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" ></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">
@@ -34,7 +34,7 @@ class Help extends Component {
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"/></div>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"></input></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="subject">
@@ -67,25 +67,27 @@ class Help extends Component {
                     <form>
                     <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
                     <address>
-                        <strong>GeekText, Inc.</strong>
-                        <p>
-                        1401 Brickell Ave, Suite 630
-                        iami, FL 33131</p>
+                        <strong>Twitter, Inc.</strong>
+                        <br>
+                        795 Folsom Ave, Suite 600
+                        </br>
+                        <br>
+                        San Francisco, CA 94107</br>
                         <abbr title="Phone">
                             P:</abbr>
-                        (1-800) 534-Geek
+                        (123) 456-7890
                     </address>
                     <address>
-                        <strong>GeekText Support</strong><p>
-                        <a href="mailto:#">Support@geektext.com</a>
-                        </p>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">first.last@example.com</a>
+                        </br>
                     </address>
                     </form>
                 </div>
             </div>
         </div>
    </div>
-
+   
     );
   }
 }
