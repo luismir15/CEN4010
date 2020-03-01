@@ -59,7 +59,7 @@ class ShopCart extends React.Component {
 			</Row>
 			
 			<div>
-			<p class="total">Total Price: $17.00</p>
+			<p class="total">Total Price: </p>
 			</div>
 
 	  </Container>
