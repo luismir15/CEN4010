@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap/lib/Tab";
+//import { Container } from "react-bootstrap/lib/Tab";
 import {Container, Row, Col, Button, Image} from 'react-bootstrap';
+
+const api = require('axios');
  
 class ShopCart extends React.Component {
   constructor(props) {

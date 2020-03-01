@@ -408,3 +408,35 @@ margin-bottom: 10px; */
 .submit:hover {
 	background-color: #dcb000;
 }
+
+/* ------------------Carlos ShopCart ---------------------- */
+
+.cart-details
+{
+  outline: 5px blue;
+}
+
+.cartbox-item-1 {
+  max-height: 50px;
+}
+
+.cartbox-item {
+  max-width: 50px;
+  margin: 5px;
+  border: 4px solid #333;
+  background-color: #dfdfdf;
+}
+
+.cartImage-container {
+  height: 50px;
+  width: 50px;
+}
+
+p.total {
+  font-size: 36px;
+  text-align: right;
+}
+
+.cart-wrapper {
+ 
+}
