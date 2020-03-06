@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 // @desc Create a book
 // @access Private
 // Auth makes POST private (must be signed in)
-router.post('/', auth, (req, res) => {
+router.post('/', (req, res) => {
 	const newBook = new Book({
 		title: req.body.title,
 		author: req.body.author,
@@ -40,7 +40,7 @@ router.post('/', auth, (req, res) => {
 // @desc DELETE a book
 // @access Private
 // Auth makes DELETE private (must be signed in)
-router.delete('/:id', auth, (req, res) => {
+router.delete('/:id', (req, res) => {
 	Book.findById(req.params.id)
 		.then(book => book.remove().then(() => res.json({ success: true })))
 		// catch ID not in db

@@ -42,7 +42,6 @@ function App() {
           {/* <input onchange={this.props.handleSearch} type="text"/>
           <button type="submit">Submit</button> */}
 
-          <li><NavLink to="/Register">Register</NavLink></li>
           <li><NavLink to="/Login">Login</NavLink></li>
           <li><NavLink to="/Orders">Orders</NavLink></li>
           <li><NavLink to="/BookDetails">Book Details</NavLink></li>
