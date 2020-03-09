@@ -36,7 +36,7 @@
 	"scripts": {
 		"start": "node ./bin/www",
 		"dev": "run-p server client",
-		"server": "cross-env DEBUG=server:* nodemon --watch .src/server ./src/server/bin/www",
+		"server": "cross-env DEBUG=server:* nodemon --watch .server ./bin/www",
 		"client": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
