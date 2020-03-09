@@ -6,7 +6,6 @@ const Profile = () => {
 
 
     React.useEffect(async () => {
-        console.log('fuck you')
         const { data: { user } } = await axios.get('/api/users');
         setCurrentUser(user);
     }, []);
