@@ -19,7 +19,7 @@ const Login = () => {
     setAuthenticated(true);
   }
 
-  return authenticated ? <Redirect to="/" /> : (
+  return authenticated ? <Redirect to="/Profile" /> : (
     <div>
       <h1 id="login">Login</h1>
       <div class='registerlink'>

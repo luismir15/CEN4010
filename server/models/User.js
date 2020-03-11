@@ -23,6 +23,14 @@ const UserSchema = new Schema({
 	nickname: {
 		type: String,
 		required: true
+	},
+	creditCards: {
+		type: Array,
+		default: []
+	},
+	shippingAddresses: {
+		type: Array,
+		default: []
 	}
 });
 

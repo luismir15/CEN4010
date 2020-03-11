@@ -11,6 +11,10 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
+	imageLink: {
+		type: String,
+		required: true
+	},
 	authorBio: {
 		type: String,
 		required: true
@@ -32,6 +36,10 @@ const BookSchema = new Schema({
 		required: true
 	},
 	rating: {
+		type: Number,
+		required: true
+	},
+	price: {
 		type: Number,
 		required: true
 	}

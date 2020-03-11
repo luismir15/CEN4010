@@ -7,13 +7,16 @@ const jwt = require('jsonwebtoken');
 // Bring in User model for querying
 const User = require('../../models/User');
 
+const secretKey = config.get('jwtSecret');
+
 // @route GET api/users
 // @desc Register new user
 // @access Public
 router.get('/', async (req, res) => {
 	const token = req.headers['x-auth-token'];
-	const { id } = jwt.verify(token, config('jwtSecret'));
-	return res.json(User.findById(id));
+	const { id } = jwt.verify(token, config('gt_myJwtSecret'));
+	console.log('');
+	return await res.json(User.findById(id));
 })
 
 // @route POST api/users
