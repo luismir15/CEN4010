@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import './style/browsing.css';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
@@ -7,6 +8,7 @@ import Orders from './pages/Orders';
 import BookDetails from './pages/BookDetails';
 import ShopCart from './pages/ShopCart';
 import Profile from './pages/Profile';
+import Books from './component/Books';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
 
@@ -34,9 +36,9 @@ const App = () => (
 
         <li><NavLink exact to="/">Home</NavLink></li>
 
-        {/* search bar*/}
+        {/* search bar
         <input type="text" />
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button>*/}
 
         {/* search bar with database integration built*/}
         {/* <input onchange={this.props.handleSearch} type="text"/>
@@ -53,8 +55,11 @@ const App = () => (
             <i class="material-icons md-dark md-24">shopping_cart</i>
           </NavLink>
         </li>
-
       </ul>
+      
+      <div className="browsing">
+        <Books/>
+      </div>
 
       {/* styles this section with css*/}
       <div className="content">
