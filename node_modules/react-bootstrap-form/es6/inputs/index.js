@@ -1,0 +1,18 @@
+import _IntegerInput from './IntegerInput';
+export { _IntegerInput as IntegerInput };
+import _TextInput from './TextInput';
+export { _TextInput as TextInput };
+import _DeferredInput from './DeferredInput';
+export { _DeferredInput as DeferredInput };
+import _RadioInput from './RadioInput';
+export { _RadioInput as RadioInput };
+import _CheckBoxInput from './CheckBoxInput';
+export { _CheckBoxInput as CheckBoxInput };
+import _DateInput from './DateInput';
+export { _DateInput as DateInput };
+import _TextAreaInput from './TextAreaInput';
+export { _TextAreaInput as TextAreaInput };
+import _SelectInput from './SelectInput';
+export { _SelectInput as SelectInput };
+import _FileInput from './FileInput';
+export { _FileInput as FileInput };
