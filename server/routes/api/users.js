@@ -10,7 +10,7 @@ const User = require('../../models/User');
 const secretKey = config.get('jwtSecret');
 
 // @route GET api/users
-// @desc Register new user
+// @desc Gets user info
 // @access Public
 router.get('/', async (req, res) => {
 	const token = req.headers['x-auth-token'];
