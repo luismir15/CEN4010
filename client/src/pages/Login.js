@@ -7,15 +7,16 @@ import * as tokenService from '../services/token';
 const Login = () => {
   // Set the states to empty before the user fills them out
   const [authenticated, setAuthenticated] = React.useState(false);
-  const [email, setEmail] = React.useState('');
+  const [userId, setUserId] = React.useState('');
   const [password, setPassword] = React.useState('');
 
   // Checks the data against the database to see if the user exists
   // If they do, log them in
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data: { token } } = await axios.post('/api/auth/', { email, password });
+    const { data: { token } } = await axios.post('/api/auth/', { userId, password });
     tokenService.store(token);
+    localStorage.setItem("userId", userId);
     setAuthenticated(true);
   }
 
@@ -28,14 +29,14 @@ const Login = () => {
       <br />
       <form id="login">
         <label class='label'>
-          Email:
+          User ID:
           <br />
           <input
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            onChange={(e) => setUserId(e.target.value)}
             id="reg"
-            name="email"
-            placeholder="jon.snow@thewall.com"
+            name="userid"
+            placeholder="jon123"
             required
           />
         </label>

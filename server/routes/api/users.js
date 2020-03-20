@@ -7,36 +7,35 @@ const jwt = require('jsonwebtoken');
 // Bring in User model for querying
 const User = require('../../models/User');
 
-const secretKey = config.get('jwtSecret');
-
 // @route GET api/users
 // @desc Gets user info
 // @access Public
 router.get('/', async (req, res) => {
-	const token = req.headers['x-auth-token'];
-	const { id } = jwt.verify(token, config('gt_myJwtSecret'));
-	console.log('');
-	return await res.json(User.findById(id));
-})
+	const { userId } = req.query;
+
+	const user = await User.findOne({ userId });
+	res.status(200).send({ user });
+});
 
 // @route POST api/users
 // @desc Register new user
 // @access Public
 router.post('/', async (req, res) => {
-	const { name, email, password, homeAddress, nickname } = req.body;
+	const { name, email, userId, password, homeAddress, nickname } = req.body;
 
 	// Simple Validation
-	if (!name || !email || !password || !homeAddress || !nickname) {
+	if (!name || !email || !userId || !password || !homeAddress || !nickname) {
 		return res.status(400).json({ msg: 'Please enter all fields.' });
 	}
 
 	// Check for existing user
-	const user = await User.findOne({ email })
+	const user = await User.findOne({ email });
 	if (user) return res.status(400).json({ msg: 'User already exists!' });
 
 	const newUser = new User({
 		name,
 		email,
+		userId,
 		password,
 		homeAddress,
 		nickname
@@ -66,6 +65,7 @@ router.post('/', async (req, res) => {
 								id: user.id,
 								name: user.name,
 								email: user.email,
+								userId: user.userId,
 								homeAddress: user.homeAddress,
 								nickname: user.nickname
 							}
@@ -76,6 +76,5 @@ router.post('/', async (req, res) => {
 		});
 	});
 });
-
 
 module.exports = router;

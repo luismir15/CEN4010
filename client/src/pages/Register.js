@@ -9,6 +9,7 @@ const Register = () => {
   const [authenticated, setAuthenticated] = React.useState(false);
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
+  const [userId, setUserId] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [homeAddress, setAddress] = React.useState('');
   const [nickname, setNickname] = React.useState('');
@@ -16,8 +17,9 @@ const Register = () => {
   // Puts all the data of the user into the database
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data: { token } } = await axios.post('/api/users/', { name, email, password, homeAddress, nickname });
+    const { data: { token } } = await axios.post('/api/users/', { name, email, userId, password, homeAddress, nickname });
     tokenService.store(token);
+    localStorage.setItem("userId", userId);
     setAuthenticated(true);
   }
 
@@ -52,6 +54,20 @@ const Register = () => {
             id="reg"
             name="email"
             placeholder="jon.snow@thewall.com"
+            required
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          User ID:
+						<br />
+          <input
+            type="text"
+            onChange={(e) => setUserId(e.target.value)}
+            id="reg"
+            name="userid"
+            placeholder="jon123"
             required
           />
         </label>

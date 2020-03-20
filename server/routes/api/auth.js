@@ -12,15 +12,15 @@ const User = require('../../models/User');
 // @desc Authenticate user
 // @access Public
 router.post('/', async (req, res) => {
-	const { email, password } = req.body;
+	const { userId, password } = req.body;
 
 	// Simple Validation
-	if (!email || !password) {
+	if (!userId || !password) {
 		return res.status(400).json({ msg: 'Please enter all fields.' });
 	}
 
 	// Check for existing user
-	const user = await User.findOne({ email })
+	const user = await User.findOne({ userId })
 	if (!user) return res.status(400).json({ msg: 'User does not exist!' });
 
 	// Validate password
@@ -39,6 +39,7 @@ router.post('/', async (req, res) => {
 			id: user.id,
 			name: user.name,
 			email: user.email,
+			userId: user.userId,
 			homeAddress: user.homeAddress,
 			nickname: user.nickname
 		}
