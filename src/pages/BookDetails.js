@@ -75,7 +75,7 @@ class BookDetails extends React.Component {
 
         <Row className="customer-reviews">
             <h3>Customer Reviews</h3>
-          
+
 
 
         </Row>
