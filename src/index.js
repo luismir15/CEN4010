@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './pages/index.css';
-import App from './pages/App';
-import * as serviceWorker from './pages/serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import FrontEndRouter from './components/index.js';
+import * as serviceWorker from './serviceWorker';
+// import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <FrontEndRouter />, 
   document.getElementById('root')
 );
 
