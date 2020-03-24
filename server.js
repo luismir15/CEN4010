@@ -33,8 +33,8 @@ app.use('/api/users', require('./src/routes/users'));
 app.use('/api/auth', require('./src/routes/auth'));
 
 // Port for DB
-const port = process.env.PORT || 3002;
-app.listen(port, () => console.log(`Server started on ${port}`));
+const port = process.env.PORT || 4000;
+// app.listen(port, () => console.log(`Server started on ${port}`));
 
 app.use(express.static(path.join(__dirname, '../..', 'build')));
 app.use(logger('dev'));

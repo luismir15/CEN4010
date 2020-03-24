@@ -1,11 +1,12 @@
+const dataset = require('../models/Book_dataset.json');
 const express = require('express');
 const router = express.Router();
 
 //Middleware
-const auth = require('../../middleware/auth');
+// const auth = require('../../middleware/auth');
 
 // Bring in Book model for querying
-const Book = require('../../models/Book');
+const Book = require('../models/Book');
 
 // @route GET api/books
 // @desc GET all books
@@ -15,6 +16,12 @@ router.get('/', (req, res) => {
 		// sort by title desc
 		.sort({ title: -1 })
 		.then(books => res.json(books));
+});
+
+router.get('/:id', (req, res) => {
+	Book.findById(req.params.id, (error, book) => {
+			res.json(book);
+	});
 });
 
 // @route POST api/books

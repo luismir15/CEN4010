@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const config = require('config');
+const config = require('../config');
 const jwt = require('jsonwebtoken');
 
 // Bring in User model for querying
-const User = require('../../models/User');
+const User = require('../models/Users');
 
 // @route POST api/auth
 // @desc Authenticate user

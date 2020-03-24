@@ -2,26 +2,26 @@ import React from 'react';
 import {Container, Row, Col, Button, Image} from 'react-bootstrap';
 
 //useful for when you make calls to the api -- helps open a gateway to collect information
-const api = require('axios');
+import axios from 'axios';
 
 //class
 //will need this function when you call this class to get the id to call the book
 class BookDetails extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props.match.params);
     this.state = {
-      title: "Harry Potter and the Cursed Child - Parts I & II",
-      author: "by " + "J. K. Rowling, John Tiffany, Jack Thorne",
-      isbn: "9781338099133",
-      price: "$17.99",
-      publisher: "Scholastic, Inc.",
-      releaseDate: "07/31/2016",
-      genre: "Fiction",
-      description: "The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, John Tiffany, and Jack Thorne, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be...",
-      authorBio: "J.K. Rowling is the author of the seven Harry Potter novels, which have sold over 450 million copies and have been translated into 79 languages, and three companion books originally published for charity. She is also the author of The Casual Vacancy, a novel for adults published in 2012, and, under the pseudonym of Robert Galbraith, is the author of the Cormoran Strike crime series. J.K. Rowling is making her screenwriting debut and is a producer on the film Fantastic Beasts and Where to Find Them, a further extension of the Wizarding World, due for release...",
-      image: "https://images-na.ssl-images-amazon.com/images/I/71zWjTSsq1L.jpg",
-      reviews: []
+        id:props.match.params.id,
+        book:{}
     };
+  }
+  componentDidMount() {
+    axios.get('http://localhost:4000/api/books/'+this.state.id)
+      .then((res) => {
+        this.setState({
+          book: res.data
+        });
+      });
   }
   render() {
 
@@ -29,27 +29,27 @@ class BookDetails extends React.Component {
       <Container className="details">
         <Row>
           <Col className="details-img-col">
-            <Image className="details-img" src={this.state.image} fluid/>
+            <Image className="details-img" src={this.state.book.thumbnailUrl} fluid/>
           </Col>
 
           <Col className="details-Basics">
             <h1>
-              {this.state.title}
+              {this.state.book.title}
             </h1>
 
             <h3>
-              {this.state.author}
+              {this.state.book.authors}
             </h3>
             <hr />
             <h2>
-              {this.state.price}
+              {this.state.book.price}
             </h2>
 
             <ul>
-              <li>  ISBN: {this.state.isbn} </li>
-              <li>  Publisher: {this.state.publisher} </li>
-              <li>  Release Date: {this.state.releaseDate}</li>
-              <li>  Genre: {this.state.genre}</li>
+              <li>  ISBN: {this.state.book.isbn} </li>
+              <li>  Publisher: {this.state.book.publisher} </li>
+              <li>  Release Date: {this.state.book.publishedDate}</li>
+              <li>  Genre: {this.state.book.genre}</li>
             </ul>
 
             <Row className="details-buttons">
@@ -70,7 +70,7 @@ class BookDetails extends React.Component {
           <div className="centering">
             <h3>Overview</h3>
           </div>
-          <p>{this.state.description}</p>
+          <p>{this.state.book.shortDescription}</p>
         </Row>
 
         <Row className="customer-reviews">
@@ -82,7 +82,7 @@ class BookDetails extends React.Component {
 
         <Row className="details-authorBio">
           <h3> Author Bio</h3>
-          <p>{this.state.authorBio}</p>
+          <p>{this.state.book.auth_bio}</p>
         </Row>
       </Container>
     );

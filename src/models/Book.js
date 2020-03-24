@@ -7,19 +7,39 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
-	author: {
+	isbn: {
 		type: String,
 		required: true
 	},
-	imageLink: {
+	pageCount: {
+		type: Number,
+		required: true
+	},
+	publishedDate: {
 		type: String,
 		required: true
 	},
-	authorBio: {
+	thumbnailUrl: {
 		type: String,
 		required: true
 	},
-	description: {
+	shortDescription: {
+		type: String,
+		required: true
+	},
+	longDescription: {
+		type: String,
+		required: true
+	},
+	status: {
+		type: String,
+		required: true
+	},
+	authors: {
+		type: String,
+		required: true
+	},
+	categories: {
 		type: String,
 		required: true
 	},
@@ -27,11 +47,15 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
-	publisher: {
+	price: {
+		type: Number,
+		required: true
+	},
+	authBio: {
 		type: String,
 		required: true
 	},
-	releaseDate: {
+	publisher: {
 		type: String,
 		required: true
 	},
@@ -39,10 +63,6 @@ const BookSchema = new Schema({
 		type: Number,
 		required: true
 	},
-	price: {
-		type: Number,
-		required: true
-	}
 });
 
 module.exports = Book = mongoose.model('book', BookSchema);
