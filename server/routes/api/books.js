@@ -17,6 +17,12 @@ router.get('/', (req, res) => {
 		.then(books => res.json(books));
 });
 
+router.get('/:id', (req, res) => {
+	Book.findById(req.params.id, (error, book) => {
+		res.json(book);
+	});
+});
+
 // @route POST api/books
 // @desc Create a book
 // @access Private

@@ -12,7 +12,6 @@ const User = require('../../models/User');
 // @access Public
 router.get('/', async (req, res) => {
 	const { userId } = req.query;
-
 	const user = await User.findOne({ userId });
 	res.status(200).send({ user });
 });
@@ -20,6 +19,7 @@ router.get('/', async (req, res) => {
 // @route POST api/users
 // @desc Register new user
 // @access Public
+
 router.post('/', async (req, res) => {
 	const { name, email, userId, password, homeAddress, nickname } = req.body;
 

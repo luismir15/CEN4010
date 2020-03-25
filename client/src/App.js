@@ -9,7 +9,6 @@ import ShopCart from './pages/ShopCart';
 import Profile from './pages/Profile';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
-
 // NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
@@ -20,58 +19,63 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //npm npm run client to run this package
 
 const App = () => (
-  <HashRouter>
+	<HashRouter>
+		<div>
+			{/* Link TITLE with home Page*/}
+			<NavLink to="/" style={{ textDecoration: 'none' }}>
+				<h1>
+					<i class="material-icons">menu_book</i> GeekText
+				</h1>
+			</NavLink>
 
-    <div>
+			{/* styles this section with css*/}
+			<ul className="header">
+				<li>
+					<NavLink exact to="/">
+						Home
+					</NavLink>
+				</li>
 
-      {/* Link TITLE with home Page*/}
-      <NavLink to="/" style={{ textDecoration: 'none' }}>
-        <h1><i class="material-icons">menu_book</i> GeekText</h1>
-      </NavLink>
+				{/* search bar*/}
+				<input type="text" />
+				<button type="submit">Submit</button>
 
-      {/* styles this section with css*/}
-      <ul className="header">
-
-        <li><NavLink exact to="/">Home</NavLink></li>
-
-        {/* search bar*/}
-        <input type="text" />
-        <button type="submit">Submit</button>
-
-        {/* search bar with database integration built*/}
-        {/* <input onchange={this.props.handleSearch} type="text"/>
+				{/* search bar with database integration built*/}
+				{/* <input onchange={this.props.handleSearch} type="text"/>
           <button type="submit">Submit</button> */}
 
-        <li><NavLink to="/Login">Login</NavLink></li>
-        <li><NavLink to="/Orders">Orders</NavLink></li>
-        <li><NavLink to="/BookDetails">Book Details</NavLink></li>
-        <li><NavLink to="/Profile">Profile</NavLink></li>
+				<li>
+					<NavLink to="/Login">Login</NavLink>
+				</li>
+				<li>
+					<NavLink to="/Orders">Orders</NavLink>
+				</li>
+				<li>
+					<NavLink to="/BookDetails">Book Details</NavLink>
+				</li>
+				<li>
+					<NavLink to="/Profile">Profile</NavLink>
+				</li>
 
+				<li>
+					<NavLink to="/ShopCart">
+						<i class="material-icons md-dark md-24">shopping_cart</i>
+					</NavLink>
+				</li>
+			</ul>
 
-        <li>
-          <NavLink to="/ShopCart">
-            <i class="material-icons md-dark md-24">shopping_cart</i>
-          </NavLink>
-        </li>
-
-      </ul>
-
-      {/* styles this section with css*/}
-      <div className="content">
-
-        <Route exact path="/" component={Home} />
-        <Route path="/Register" component={Register} />
-        <Route path="/Login" component={Login} />
-        <Route path="/Orders" component={Orders} />
-        <Route path="/BookDetails" component={BookDetails} />
-        <Route path="/ShopCart" component={ShopCart} />
-        <Route path="/Profile" component={Profile} />
-
-      </div>
-    </div>
-
-  </HashRouter>
-
+			{/* styles this section with css*/}
+			<div className="content">
+				<Route exact path="/" component={Home} />
+				<Route path="/Register" component={Register} />
+				<Route path="/Login" component={Login} />
+				<Route path="/Orders" component={Orders} />
+				<Route path="/Book/:id" component={BookDetails} />
+				<Route path="/ShopCart" component={ShopCart} />
+				<Route path="/Profile" component={Profile} />
+			</div>
+		</div>
+	</HashRouter>
 );
 
 export default App;

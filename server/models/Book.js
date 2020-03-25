@@ -7,19 +7,39 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
-	author: {
+	isbn: {
 		type: String,
 		required: true
 	},
-	imageLink: {
+	pageCount: {
+		type: Number,
+		required: true
+	},
+	publishedDate: {
 		type: String,
 		required: true
 	},
-	authorBio: {
+	thumbnailUrl: {
 		type: String,
 		required: true
 	},
-	description: {
+	shortDescription: {
+		type: String,
+		required: true
+	},
+	longDescription: {
+		type: String,
+		required: true
+	},
+	status: {
+		type: String,
+		required: true
+	},
+	authors: {
+		type: String,
+		required: true
+	},
+	categories: {
 		type: String,
 		required: true
 	},
@@ -27,19 +47,19 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
+	price: {
+		type: Number,
+		required: true
+	},
+	authBio: {
+		type: String,
+		required: true
+	},
 	publisher: {
 		type: String,
 		required: true
 	},
-	releaseDate: {
-		type: String,
-		required: true
-	},
 	rating: {
-		type: Number,
-		required: true
-	},
-	price: {
 		type: Number,
 		required: true
 	}

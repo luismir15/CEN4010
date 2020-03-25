@@ -12,7 +12,7 @@ const app = express();
 
 // Built in express parser
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 // DB Config
 const db = config.get('mongoURI');

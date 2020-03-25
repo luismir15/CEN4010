@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Profile.css';
 
 const DEFAULT = 'DEFAULT';
 const ERROR = 'ERROR';
@@ -18,6 +19,7 @@ const Profile = () => {
 		nickname: null
 	});
 
+	// fetches the user information from localstorage using the stored userID
 	React.useEffect(() => {
 		const fetchUserData = async () => {
 			try {
@@ -64,12 +66,14 @@ const Profile = () => {
 	}
 };
 
+// logout button: clears token and userID from localstorage and refreshes window, logging the user out
 const logout = async e => {
 	localStorage.removeItem('token');
 	localStorage.removeItem('userId');
 	window.location.reload();
 };
 
+// renders the user profile
 const AuthedProfile = ({ user }) => (
 	<div>
 		<input type="submit" onClick={logout} class="submit" value="Logout" />
