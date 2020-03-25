@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
 		nickname
 	});
 
-	const { userId } = await newUser.save();
+	await newUser.save();
 
 	const token = await jwt.sign({ userId }, config.get('jwtSecret'), {
 		expiresIn: 3600
@@ -50,14 +50,7 @@ router.post('/', async (req, res) => {
 
 	res.json({
 		token,
-		user: {
-			id: user.id,
-			name: user.name,
-			email: user.email,
-			userId: user.userId,
-			homeAddress: user.homeAddress,
-			nickname: user.nickname
-		}
+		user: newUser
 	});
 });
 

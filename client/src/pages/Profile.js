@@ -80,7 +80,7 @@ const logout = async e => {
 const AuthedProfile = ({ user }) => (
 	<div>
 		<input type="submit" onClick={logout} class="submit" value="Logout" />
-		<input type="submit" onClick={} class="submit" value="Update" />
+		<input type="submit" class="submit" value="Update" />
 		<h1>Name</h1>
 		<h3>{user?.name}</h3>
 		<h1>User ID</h1>

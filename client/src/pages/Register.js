@@ -16,20 +16,30 @@ const Register = () => {
 
 	// Puts all the data of the user into the database
 	const handleSubmit = async e => {
+		console.log('1');
 		e.preventDefault();
-		const {
-			data: { token }
-		} = await axios.post('/api/users/', {
-			name,
-			email,
-			userId,
-			password,
-			homeAddress,
-			nickname
-		});
-		tokenService.store(token);
-		localStorage.setItem('userId', userId);
-		setAuthenticated(true);
+		console.log('2');
+		try {
+			const {
+				data: { token }
+			} = await axios.post('/api/users/', {
+				name,
+				email,
+				userId,
+				password,
+				homeAddress,
+				nickname
+			});
+			console.log('3');
+			tokenService.store(token);
+			console.log('4');
+			localStorage.setItem('userId', userId);
+			console.log('5');
+			setAuthenticated(true);
+			console.log('6');
+		} catch (e) {
+			console.log(e);
+		}
 	};
 
 	return authenticated ? (

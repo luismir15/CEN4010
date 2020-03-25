@@ -14,17 +14,13 @@ const Login = () => {
 	// If they do, log them in
 	const handleSubmit = async e => {
 		e.preventDefault();
-		const {
-			data: { token }
-		} = await axios.post('/api/auth/', { userId, password });
+		const { data: { token } } = await axios.post('/api/auth/', { userId, password });
 		tokenService.store(token);
 		localStorage.setItem('userId', userId);
 		setAuthenticated(true);
 	};
 
-	return authenticated ? (
-		<Redirect to="/Profile" />
-	) : (
+	return authenticated ? <Redirect to="/Profile" /> : (
 		<div>
 			<h1 id="login">Login</h1>
 			<div class="registerlink">
