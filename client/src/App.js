@@ -8,7 +8,7 @@ import Orders from './pages/Orders';
 import BookDetails from './pages/BookDetails';
 import ShopCart from './pages/ShopCart';
 import Profile from './pages/Profile';
-import Books from './component/Books';
+//import Books from './component/Books';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
 
@@ -22,60 +22,36 @@ import { Route, HashRouter, NavLink } from 'react-router-dom';
 //npm npm run client to run this package
 
 const App = () => (
-  <HashRouter>
-
-    <div>
-
-      {/* Link TITLE with home Page*/}
-      <NavLink to="/" style={{ textDecoration: 'none' }}>
-        <h1><i class="material-icons">menu_book</i> GeekText</h1>
-      </NavLink>
-
-      {/* styles this section with css*/}
-      <ul className="header">
-
-        <li><NavLink exact to="/">Home</NavLink></li>
-
-        {/* search bar
-        <input type="text" />
-        <button type="submit">Submit</button>*/}
-
-        {/* search bar with database integration built*/}
-        {/* <input onchange={this.props.handleSearch} type="text"/>
-          <button type="submit">Submit</button> */}
-
-        <li><NavLink to="/Login">Login</NavLink></li>
-        <li><NavLink to="/Orders">Orders</NavLink></li>
-        <li><NavLink to="/BookDetails">Book Details</NavLink></li>
-        <li><NavLink to="/Profile">Profile</NavLink></li>
-
-
-        <li>
-          <NavLink to="/ShopCart">
-            <i class="material-icons md-dark md-24">shopping_cart</i>
-          </NavLink>
-        </li>
-      </ul>
-      
-      <div className="browsing">
-        <Books/>
+  <div>
+    <HashRouter>
+      <div>
+        <NavLink to="/" style={{ textDecoration: 'none' }}>
+          <h1><i class="material-icons">menu_book</i> GeekText</h1>
+        </NavLink>
+        <ul className="header">
+          <li><NavLink exact to="/">Home</NavLink></li>
+          <li><NavLink to="/Login">Login</NavLink></li>
+          <li><NavLink to="/Orders">Orders</NavLink></li>
+          <li><NavLink to="/BookDetails">Book Details</NavLink></li>
+          <li><NavLink to="/Profile">Profile</NavLink></li>
+          <li>
+            <NavLink to="/ShopCart">
+              <i class="material-icons md-dark md-24">shopping_cart</i>
+            </NavLink>
+          </li>
+        </ul>
+        <div className="content">
+          <Route exact path="/" component={Home} />
+          <Route path="/Register" component={Register} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Orders" component={Orders} />
+          <Route path="/BookDetails" component={BookDetails} />
+          <Route path="/ShopCart" component={ShopCart} />
+          <Route path="/Profile" component={Profile} />
+        </div>
       </div>
-
-      {/* styles this section with css*/}
-      <div className="content">
-
-        <Route exact path="/" component={Home} />
-        <Route path="/Register" component={Register} />
-        <Route path="/Login" component={Login} />
-        <Route path="/Orders" component={Orders} />
-        <Route path="/BookDetails" component={BookDetails} />
-        <Route path="/ShopCart" component={ShopCart} />
-        <Route path="/Profile" component={Profile} />
-
-      </div>
-    </div>
-
-  </HashRouter>
+    </HashRouter>
+  </div>
 
 );
 

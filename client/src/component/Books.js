@@ -44,6 +44,8 @@ class Books extends Component {
 
     render() {
         const filteredBooks = this.state.books.sort((a, b) => {
+            const price1 = a.saleInfo.hasOwnProperty('listPrice') == false ? "$0.00" : a.saleInfo.listPrice.amount;
+            const price2 = b.saleInfo.hasOwnProperty('listPrice') == false ? "$0.00" : b.saleInfo.listPrice.amount;
             if(this.state.sort == 'Newest'){
                 console.log("in newest")
                 return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4));
@@ -57,11 +59,11 @@ class Books extends Component {
             else if(this.state.sort == 'Low'){
                 return parseInt(a.volumeInfo.averageRating) - parseInt(b.volumeInfo.averageRating);
             }
-            else if(this.state.sort == 'Expensive'){
-                return parseInt(b.saleInfo.listPrice.amount) - parseInt(a.saleInfo.listPrice.amount);
+            else if(this.state.sort === 'Expensive'){
+                return parseInt(price2) - parseInt(price1);
             }
-            else if(this.state.sort == 'Cheap'){
-                return parseInt(a.saleInfo.listPrice) - parseInt(b.saleInfo.listPrice);
+            else if(this.state.sort === 'Cheap'){
+                return parseInt(price1) - parseInt(price2);
             }
           return;
         })
