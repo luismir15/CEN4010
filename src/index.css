@@ -1,25 +1,33 @@
 body {
-  background-color: #ffcc00;
+  background-color: #ffcc00 !important;
   padding: 20px;
   margin: 0;
 }
+
 h1,
 h2,
+h3,
+h4,
 p,
 ul,
+a,
 li {
-  font-family: sans-serif;
+  font-family: Nunito;
   color: #000000;
+  list-style-type: none;
 }
+
 ul.header li {
   display: inline;
   list-style-type: none;
   margin: 35px;
 }
+
 ul.header {
   background-color: #111;
   padding: 0;
 }
+
 ul.header li a {
   color: #fff;
   font-weight: bold;
@@ -56,7 +64,7 @@ ul.header li a {
 .flexbox-item {
   width: 200px;
   margin: 8px;
-  border: 4px solid #333;
+  border: 1px solid #333;
   background-color: #dfdfdf;
 }
 
@@ -141,60 +149,67 @@ ul.header li a {
 
 /**********BOOK DETAILS CSS********************/
 
-.details
-{
-}
-
-
-.details-img
-{
-  height: inherit;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.details-img-col{
+.details-img-col {
     height: 400px;
+    border-color: rgb(0,0,0,0);
 }
 
-.details-description
-{
+.details-description {
   background-color: #F0F0F0;
   padding: 25px 50px 25px 50px;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
-.centering
-{
-  /* background-color: red;
-  font-family: serif;
-  text-align: center;
-  /* display: inline-block; */
-}
-
-.details-authorBio
-{
-  background-color: #ffcc00;
-  padding: 25px 50px 25px 50px;
-  margin-top: 10px;
+.details-authorBio {
+  padding: 50px 50px 50px 50px;
+  margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.details-Basics
-{
 }
 
 .details li {
   list-style-type: none;
+  text-align: center;
 }
+
 .details ul {
   padding-left: 0;
   padding: 18px 0px 0px 0px;
+  text-align: center;
 }
 
 .addtoCartBtn {
   float: right;
+}
+
+.details-img-zoom {
+  display: block;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-content {
+  background: rgb(0, 0, 0, 0) !important;
+  border: rgb(0, 0, 0, 0) !important;
+}
+
+.center-it {
+  text-align: center !important;
+  color: black!important;
+}
+
+.center-it h3 {
+  text-align: center !important;
+  color: black!important;
+}
+
+.btn.btn-primary.img {
+  background-color: rgb(0,0,0,0) !important;
+  border-color: rgb(0,0,0,0) !important;
+  border: 0px !important;
+}
+
+.details-description.row{
+  margin-top: 25px;
 }
