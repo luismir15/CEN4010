@@ -38,6 +38,7 @@ class BookDetails extends React.Component {
               </Popup>
             </Col>
 
+
             <Col className="center-it">
               <h1 className="center-it">
                 {this.state.book.title}
@@ -64,6 +65,8 @@ class BookDetails extends React.Component {
                   Genre: {this.state.book.genre}</li>
                 <li>
                   Categories: {this.state.book.categories}</li>
+                  <li>
+                    Rating: {this.state.book.rating}</li>
               </ul>
 
                 <Button variant="primary" size="lg">ADD TO CART</Button>
