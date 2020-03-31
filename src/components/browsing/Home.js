@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class Home extends React.Component {
@@ -32,7 +33,9 @@ render(){
                                   <div className="flexbox-item flexbox-item-3">
                                     <img className="fit-container" src={book.thumbnailUrl}/>
                                   </div>
-                                  <h4>{book.title}</h4>
+                                  {book.title}
+                                  <p>by {book.authors}</p>
+
                               </div>
               </NavLink>
             </li>
