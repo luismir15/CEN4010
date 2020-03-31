@@ -1,4 +1,4 @@
-const dataset = require('../models/Book_dataset.json');
+// const dataset = require('../models/Book_dataset.json');
 const express = require('express');
 const router = express.Router();
 
@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
 	Book.findById(req.params.id, (error, book) => {
+		console.log(book);
 			res.json(book);
 	});
 });
@@ -31,13 +32,14 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
 	const newBook = new Book({
 		title: req.body.title,
-		author: req.body.author,
+		authors: req.body.authors,
 		authorBio: req.body.authorBio,
 		description: req.body.description,
 		genre: req.body.genre,
 		publisher: req.body.publisher,
 		releaseDate: req.body.releaseDate,
-		rating: req.body.rating
+		rating: req.body.rating,
+		categories: req.body.categories
 	});
 
 	newBook.save().then(book => res.json(book));
