@@ -1,5 +1,8 @@
 import React from 'react';
 import {Container, Row, Col, Button, Image} from 'react-bootstrap';
+import Popup from 'reactjs-popup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 //useful for when you make calls to the api -- helps open a gateway to collect information
 import axios from 'axios';
@@ -11,81 +14,82 @@ class BookDetails extends React.Component {
     super(props);
     console.log(props.match.params);
     this.state = {
-        id:props.match.params.id,
-        book:{}
+      id: props.match.params.id,
+      book: {}
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/api/books/'+this.state.id)
-      .then((res) => {
-        this.setState({
-          book: res.data
-        });
-      });
+    axios.get('http://localhost:4000/api/books/' + this.state.id).then((res) => {
+      this.setState({book: res.data});
+      console.log(res.data);
+    });
   }
   render() {
 
     return (
       <Container className="details">
-        <Row>
-          <Col className="details-img-col">
-            <Image className="details-img" src={this.state.book.thumbnailUrl} fluid/>
-          </Col>
+      <Row>
+        <Col>
+          <Row>
+            <Col className="details-img-col center-it">
+              <Popup modal="modal" trigger={<Button className=" btn btn-primary img"> <Image className = "details-img-col"
+                src = { this.state.book.thumbnailUrl} />< /Button>} position="right center">
+                <Image className="details-img-zoom" src={this.state.book.thumbnailUrl}/>
+              </Popup>
+            </Col>
 
-          <Col className="details-Basics">
-            <h1>
-              {this.state.book.title}
-            </h1>
+            <Col className="center-it">
+              <h1 className="center-it">
+                {this.state.book.title}
+              </h1>
 
-            <h3>
-              {this.state.book.authors}
-            </h3>
-            <hr />
-            <h2>
-              {this.state.book.price}
-            </h2>
+              <h3 className="center-it">
+                {this.state.book.authors}
+              </h3>
 
-            <ul>
-              <li>  ISBN: {this.state.book.isbn} </li>
-              <li>  Publisher: {this.state.book.publisher} </li>
-              <li>  Release Date: {this.state.book.publishedDate}</li>
-              <li>  Genre: {this.state.book.genre}</li>
-            </ul>
+              <h2 className="center-it">
+                {this.state.book.price}
+              </h2>
 
-            <Row className="details-buttons">
-                <Col className="addtoCartBtn" xs={6}>
-                  <Button variant="primary" size="sm" block>ADD TO CART</Button>
-                </Col>
+              <ul>
+                <li>
+                  ISBN: {this.state.book.isbn}
+                </li>
+                <li>
+                  Publisher: {this.state.book.publisher}
+                </li>
+                <li>
+                  Release Date: {this.state.book.publishedDate}</li>
+                <li>
+                  Genre: {this.state.book.genre}</li>
+                <li>
+                  Categories: {this.state.book.categories}</li>
+              </ul>
 
-                <Col className="addtoWishlistBtn" xs={6}>
-                  <Button variant="light" size="sm" block>ADD TO WISHLIST</Button>
-                </Col>
-            </Row>
+                <Button variant="primary" size="lg">ADD TO CART</Button>
+                <Button variant="light" size="lg">ADD TO WISHLIST</Button>
 
-          </Col>
-
-        </Row>
-
-        <Row className="details-description">
-          <div className="centering">
+            </Col>
+          </Row>
+<Row>
+<Col xs={4}></Col>
+</Row>
+          <Row className="details-description">
             <h3>Overview</h3>
-          </div>
-          <p>{this.state.book.shortDescription}</p>
-        </Row>
+            <p>{this.state.book.shortDescription}</p>
+          </Row>
 
-        <Row className="customer-reviews">
+          <Row className="details-description">
             <h3>Customer Reviews</h3>
+          </Row>
 
-
-
-        </Row>
-
-        <Row className="details-authorBio">
-          <h3> Author Bio</h3>
-          <p>{this.state.book.auth_bio}</p>
-        </Row>
-      </Container>
-    );
+          <Row className="details-description">
+            <h3>Author Bio</h3>
+            <p>{this.state.book.auth_bio}</p>
+          </Row>
+        </Col>
+      </Row>
+    </Container>)
   }
 }
 
