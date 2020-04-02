@@ -12,14 +12,13 @@ class Home extends React.Component {
     };
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:4000/api/books')
-      .then((res) => {
-        this.setState({
-          books: res.data
-        });
-      });
-  }
+	componentDidMount() {
+		axios.get('http://localhost:3002/api/books').then(res => {
+			this.setState({
+				books: res.data
+			});
+		});
+	}
 
 render(){
   return(
