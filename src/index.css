@@ -213,3 +213,8 @@ ul.header li a {
 .details-description.row{
   margin-top: 25px;
 }
+
+.book-wrapper {
+  border-color: red;
+  border: 10px;
+}
