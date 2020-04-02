@@ -8,6 +8,17 @@
 	text-align: center;
 }
 
+input {
+	color: black;
+}
+
+#signin {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 2.5rem;
+}
+
 .registerlink {
 	text-align: center;
 }
@@ -21,10 +32,25 @@
 	position: relative;
 	padding: 12px 20px;
 	border-radius: 4px;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 400;
 	line-height: normal;
 	box-shadow: 0px 4px 20px 0px transparent;
+}
+
+#register {
+	width: 100%;
+	position: relative;
+	padding: 12px 20px;
+	border-radius: 4px;
+	font-size: 1.3rem;
+	font-weight: 400;
+	line-height: normal;
+	box-shadow: 0px 4px 20px 0px transparent;
+}
+
+a {
+	font-size: 1.3rem;
 }
 
 .submit {
@@ -35,7 +61,7 @@
 	text-decoration: none;
 	margin: 4px 2px;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 1.3rem;
 }
 
 .submit:hover {

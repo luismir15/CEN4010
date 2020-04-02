@@ -14,15 +14,19 @@ const Login = () => {
 	// If they do, log them in
 	const handleSubmit = async e => {
 		e.preventDefault();
-		const { data: { token } } = await axios.post('/api/auth/', { userId, password });
+		const {
+			data: { token }
+		} = await axios.post('/api/auth/', { userId, password });
 		tokenService.store(token);
 		localStorage.setItem('userId', userId);
 		setAuthenticated(true);
 	};
 
-	return authenticated ? <Redirect to="/Profile" /> : (
+	return authenticated ? (
+		<Redirect to="/Profile" />
+	) : (
 		<div>
-			<h2 id="login">Sign in</h2>
+			<h2 id="signin">Sign in</h2>
 			<br />
 			<form id="login">
 				<label class="label">
@@ -33,7 +37,7 @@ const Login = () => {
 						onChange={e => setUserId(e.target.value)}
 						id="reg"
 						name="userid"
-						placeholder="ID: Email Address"
+						placeholder="User ID"
 						required
 					/>
 				</label>
@@ -55,9 +59,9 @@ const Login = () => {
 				<br />
 				<br />
 				<div class="registerlink">
-				<Link to="/Register" id="registration">
+					<Link to="/Register" id="registration">
 						Don't have an account? Sign Up
-				</Link>
+					</Link>
 				</div>
 
 				<input
