@@ -31,6 +31,7 @@ mongoose
 app.use('/api/books', require('./routes/api/books'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/Comments', require('./routes/api/Comments'));
 
 // Port for DB
 const port = process.env.PORT || 3002;

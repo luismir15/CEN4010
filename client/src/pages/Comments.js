@@ -5,6 +5,16 @@ import comInput from './comInput';
 
 class Comments extends Component {
 
+	 handleSubmit = async e => {
+    e.preventDefault();
+    console.log()
+    
+		// const { data: { token } } = await axios.post('/api/auth/', { userId, password });
+		// tokenService.store(token);
+		// localStorage.setItem('userId', userId);
+		// setAuthenticated(true);
+	};
+
   state = {
     comments: []
   }
@@ -13,8 +23,6 @@ class Comments extends Component {
     this.getComments();
   }
 
-
-  
   getComments = () => {
     axios.get('/api/comments')
       .then(res => {
@@ -76,7 +84,11 @@ class Comments extends Component {
            </div>
         </div>
             <div class="col-md-12">
-              <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+              <button 
+                  type="submit" 
+                  onClick={handleSubmit} 
+                  class="btn btn-primary pull-right" 
+                  id="btnContactUs">
                   Post Review</button>
             </div>
 

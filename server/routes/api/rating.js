@@ -1,18 +1,18 @@
 const express = require ('express');
 const router = express.Router();
-const comments = require('../../models/Comments');
+const rating = require('../../models/Rating');
 
-router.get('/Comments', (req, res, next) => {
+router.get('/Rating', (req, res, next) => {
 
   //this will return all the data, exposing only the id and action field to the client
-  comments.find({}, 'comments')
+  rating.find({}, 'rating')
     .then(data => res.json(data))
     .catch(next)
 });
 
 router.post('/', (req, res, next) => {
         
-    comments.create(req.body)
+    rating.create(req.body)
       .then(data => res.json(data))
       .catch(next)
       
@@ -23,11 +23,10 @@ router.post('/', (req, res, next) => {
 //   }
 });
 
-router.delete('/Comments/:id', (req, res, next) => {
-  comments.findOneAndDelete({"_id": req.params.id})
+router.delete('/Rating/:id', (req, res, next) => {
+  rating.findOneAndDelete({"_id": req.params.id})
     .then(data => res.json(data))
     .catch(next)
 })
 
 module.exports = router;
-
