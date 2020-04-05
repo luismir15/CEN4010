@@ -86,7 +86,7 @@ class Comments extends Component {
             <div class="col-md-12">
               <button 
                   type="submit" 
-                  onClick={handleSubmit} 
+                  // onClick={handleSubmit} 
                   class="btn btn-primary pull-right" 
                   id="btnContactUs">
                   Post Review</button>
