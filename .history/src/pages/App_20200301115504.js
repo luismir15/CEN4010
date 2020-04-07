@@ -10,14 +10,14 @@ import ShopCart from './ShopCart';
 import Register from './Register';
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
-//This is Mark II for this project, most static pages and theme have been set
+
 // NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
 //Do not push updates to master branch, push to your own branch PLZ
 
 //updated file structure on my branch (miguel) 2/17/20
-//npm install after downloading/ npm install --save react-bootstrap might be needed for BookDetails to work
+//npm install after downloading/ npm install --save react-bootstrap mighe be needed for BookDetails to work
 //npm npm run client to run this package
 
 function App() {
