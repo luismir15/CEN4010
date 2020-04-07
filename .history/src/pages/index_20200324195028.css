@@ -503,29 +503,29 @@ p.total {
   width: 30%;
 }
 
-.item.list-group-item .list-group-image
+.item.grid-group-item .grid-group-image
 {
   margin-right: 10px;
 }
-.item.list-group-item .thumbnail
+.item.grid-group-item .thumbnail
 {
   margin-bottom: 0px;
   display: inline-block;
 }
-.item.list-group-item .caption
+.item.grid-group-item .caption
 {
   float: left;
   width: 70%;
   margin: 0;
 }
 
-.item.list-group-item:before, .item.list-group-item:after
+.item.grid-group-item:active, .item.grid-group-item:after
 {
   display: table;
   content: " ";
 }
 
-.item.list-group-item:after
+.item.grid-group-item:after
 {
   clear: both;
 }

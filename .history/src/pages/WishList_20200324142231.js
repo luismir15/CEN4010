@@ -5,9 +5,15 @@ class WishList extends Component {
   render() {
     return (
 
+<script>
+$(document).ready(function() {
+            $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');})
+            $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+        });
 
+</script>
 
-    <div class="container">
+      <div class="container">
       <div class="row">
           <div class="col-lg-12 my-3">
               <div class="pull-right">
@@ -154,17 +160,6 @@ class WishList extends Component {
                                       <p class="lead">
                                           $21.000</p>
                                   </div>
-                                    {/* <script>
-
-                                    $(document).ready(function() {
-                                      $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-                                      $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-                                  });
-
-
-
-                                    </script> */}
-
                                   <div class="col-xs-12 col-md-6">
                                       <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
                                   </div>
@@ -173,7 +168,7 @@ class WishList extends Component {
                       </div>
                   </div>
               </div>
-           </div>
+  </div>
 
 
 

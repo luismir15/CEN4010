@@ -519,13 +519,13 @@ p.total {
   margin: 0;
 }
 
-.item.list-group-item:before, .item.list-group-item:after
+.item.list-group-item:before, .item.list-group-item
 {
   display: table;
   content: " ";
 }
 
-.item.list-group-item:after
+.item.list-group-item
 {
   clear: both;
 }

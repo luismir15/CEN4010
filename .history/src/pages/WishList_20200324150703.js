@@ -22,7 +22,7 @@ class WishList extends Component {
               </div>
           </div>
       </div> 
-      <div id="products" class="row view-group">
+      <div id="products" class="row view-group" class='list-group-item'>
                   <div class="item col-xs-4 col-lg-4">
                       <div class="thumbnail card">
                           <div class="img-event">

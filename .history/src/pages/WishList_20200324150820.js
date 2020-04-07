@@ -22,8 +22,8 @@ class WishList extends Component {
               </div>
           </div>
       </div> 
-      <div id="products" class="row view-group">
-                  <div class="item col-xs-4 col-lg-4">
+      <div id="products"  class='list-group-item'>
+                  <div class="item col-xs-4 col-lg-4" class='list-group-item'>
                       <div class="thumbnail card">
                           <div class="img-event">
                               <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />

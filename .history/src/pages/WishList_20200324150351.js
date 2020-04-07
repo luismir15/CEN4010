@@ -12,10 +12,10 @@ class WishList extends Component {
           <div class="col-lg-12 my-3">
               <div class="pull-right">
                   <div class="btn-group">
-                      <button class="btn btn-info" id="list">
+                      <button class="btn btn-danger" id="list">
                           List View
                       </button>
-                      <button class="btn btn-danger" id="grid">
+                      <button class="" id="grid">
                           Grid View
                       </button>
                   </div>
