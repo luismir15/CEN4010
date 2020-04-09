@@ -1,5 +1,8 @@
 import React from "react";
 import StarRatings from "react-star-ratings";
+
+
+
 export default function Comment(props) {
   const { name, text, rating, posted } = props.comment;
   return (
@@ -16,7 +19,6 @@ export default function Comment(props) {
         </div>
       </div>
       <div class="col-md-9">
-        {/* <h3>Greatest book I've read</h3> */}
         <div class="ratebox text-center" data-id="0" data-rating="5"></div>
         <p>
           <StarRatings

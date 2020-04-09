@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import StarRatings from "react-star-ratings";
+
+
 export default class Comments extends Component {
   state = {
     text: "",
