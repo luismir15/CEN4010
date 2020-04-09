@@ -1,7 +1,10 @@
 import { ADD_TO_CART, GET_CART_ITEMS, DELETE_FROM_CART } from "./types";
 import axios from "axios";
 
-// Uses the authenticated user ID
+// You will notice that I've hard coded the user id
+// This will change to the ID of the Authenticated user
+// Which you can pass to the methods e.g addToCart(data,userId)
+
 export const addToCart = (data) => async (dispatch) => {
   const userId = "1";
   const res = await axios.post("http://localhost:3002/api/carts", {

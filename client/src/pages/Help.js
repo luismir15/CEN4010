@@ -77,7 +77,7 @@ class Help extends Component {
                   </address>
                   <address>
                       <strong>GeekText Support</strong><p>
-                      <a href="mailto:#">Support@geektext.com</a>
+                      <a href="mailto:#">Support@GeekText.com</a>
                       </p>
                   </address>
                   </form>

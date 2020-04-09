@@ -3,6 +3,8 @@ import "../index.css";
 import { connect } from "react-redux";
 import { getWishLists, deleteWishList } from "../actions/wishlistActions";
 import { addToCart } from "../actions/cartAction";
+
+
 class WishList extends Component {
   async componentDidMount() {
     try {

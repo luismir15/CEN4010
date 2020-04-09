@@ -1,7 +1,6 @@
 import { ADD_WISHLIST, GET_WISHLIST, DELETE_WISHLIST } from "./types";
 import axios from "axios";
 
-//for adding items to wishlist
 export const addToWishList = (data) => async (dispatch) => {
   const res = await axios.post("http://localhost:3002/api/wishlists", {
     data,
@@ -12,7 +11,6 @@ export const addToWishList = (data) => async (dispatch) => {
   return res.data.success;
 };
 
-//get function for wishlist items
 export const getWishLists = () => (dispatch) => {
   const userId = "2";
   axios.get(`http://localhost:3002/api/wishlists/${userId}`).then((res) => {
@@ -20,7 +18,6 @@ export const getWishLists = () => (dispatch) => {
   });
 };
 
-//detele wishlist items
 export const deleteWishList = (id) => async (dispatch) => {
   const userId = "2";
   const res = await axios.delete(

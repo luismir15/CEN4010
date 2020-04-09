@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
   }).then((wishlist) => {
     console.log(wishlist);
     if (!wishlist) {
-      // Add or modify the wishlist of the user
+      //   Add or modify the wishlist of the user
       WishList.update(
         { userId },
         {

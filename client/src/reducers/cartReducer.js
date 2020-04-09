@@ -8,7 +8,6 @@ const initialState = {
   carts: [],
 };
 
-//Some cart reducer
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_CART_ITEMS:

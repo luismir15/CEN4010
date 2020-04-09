@@ -4,7 +4,6 @@ const initialState = {
   wishlists: [],
 };
 
-//Some wishlist reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_WISHLIST: {

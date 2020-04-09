@@ -1,5 +1,3 @@
-
-//Cart buttons
 export const ADD_WISHLIST = "ADD_WISHLIST";
 export const DELETE_WISHLIST = "DELETE_WISHLIST";
 export const GET_WISHLIST = "GET_WISHLIST";

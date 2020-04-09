@@ -1,6 +1,6 @@
 import React from "react";
 
-//Wishlist context, pass down the data  
+//Pass down wishlist data 
 const WishListContext = React.createContext({
   wishlists: [],
   addToWishList: () => {},
