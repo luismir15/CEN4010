@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import '../index.css';
  
+
+//Some changes made to wishlist
 class WishList extends Component {
   render() {
     return (
