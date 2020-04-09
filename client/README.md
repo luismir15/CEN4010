@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Fix for react-router-dom error
+
+npm install react-router-dom --save
+
 ## Available Scripts
 
 In the project directory, you can run:
