@@ -1,7 +1,5 @@
 import React from 'react';
 
-import EditCreditCardModal from './EditCreditCardModal';
-
 const DEFAULT = 'DEFAULT';
 const SHOWING_CREDIT_CARD_MODAL = 'SHOWING_CREDIT_CARD_MODAL';
 
