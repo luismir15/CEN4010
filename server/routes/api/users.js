@@ -39,29 +39,54 @@ router.post('/', async (req, res) => {
 		userId,
 		password: hashedPassword,
 		homeAddress,
-		nickname
+		nickname,
 	});
 
 	await newUser.save();
 
 	const token = await jwt.sign({ userId }, config.get('jwtSecret'), {
-		expiresIn: 3600
+		expiresIn: 3600,
 	});
 
 	res.json({
 		token,
-		user: newUser
+		user: newUser,
 	});
 });
 
 router.put('/', async (req, res) => {
-	const { name, email, userId, password, homeAddress, nickname } = req.body;
+	const {
+		name,
+		email,
+		userId,
+		password,
+		homeAddress,
+		creditCard1,
+		creditCard1Date,
+		creditCard2,
+		creditCard2Date,
+		shippingAddress1,
+		shippingAddress2,
+		nickname,
+	} = req.body;
 
 	const hashedPassword = await bcrypt.hash(password, 10);
 
 	const updatedUser = await User.findOneAndUpdate(
 		{ userId },
-		{ name, email, password: hashedPassword, homeAddress, nickname }
+		{
+			name,
+			email,
+			password: hashedPassword,
+			homeAddress,
+			nickname,
+			creditCard1,
+			creditCard1Date,
+			creditCard2,
+			creditCard2Date,
+			shippingAddress1,
+			shippingAddress2,
+		}
 	);
 
 	await updatedUser.save();
