@@ -9,6 +9,8 @@ import BookDetails from './pages/BookDetails';
 import Profile from './pages/Profile';
 import Help from './pages/Help';
 import ShopCart from './pages/ShopCart';
+import Books from './components/Browsing/Books';
+import './components/Browsing/Browsing.css';
 
 import { Route, HashRouter, NavLink } from 'react-router-dom';
 
@@ -40,9 +42,9 @@ const App = () => (
 					</NavLink>
 				</li>
 
-				{/* search bar*/}
+				{/* search bar
 				<input type="text" />
-				<button type="submit">Submit</button>
+				<button type="submit">Submit</button>*/}
 
 				{/* search bar with database integration built*/}
 				{/* <input onchange={this.props.handleSearch} type="text"/>
@@ -66,6 +68,10 @@ const App = () => (
 				</li>
 			</ul>
 
+			{/*<div className="Browsing">
+				<Books/>
+			</div>*/}
+
 			{/* styles this section with css*/}
 			<div className="content">
 				<Route exact path="/" component={Home} />
@@ -77,8 +83,6 @@ const App = () => (
 				<Route path="/Profile" component={Profile} />
 				<Route path="/Help" component={Help} />
 				<Route path="/ShopCart" component={ShopCart} />
-
-				
 			</div>
 		</div>
 	</HashRouter>
