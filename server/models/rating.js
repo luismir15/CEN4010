@@ -3,15 +3,28 @@ const Schema = mongoose.Schema;
 
 // Create comment schema
 const ratingSchema = new Schema({
-rating: {
-        _id: ObjectId,
-        discussion_id: ObjectId,
-        slug: '34db',
-        posted: ISODateTime,
-        rateCount : '',
-        rateValue : '',
-        rateAverage: ''
+
+
+        discussion_id: {
+                type: String,
+        },
+        posted: {
+                type: Date, 
+                default: new Date()
+        },
+        rateCount :{
+                type: Array,
+		default: []
+        },
+        rateValue :{
+                type: Array,
+		default: []
+        },
+        rateAverage :{
+                type: Array,
+		default: []
         }
+        
 });
 
 module.exports = Rating = mongoose.model('rating', ratingSchema);

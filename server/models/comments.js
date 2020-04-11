@@ -1,24 +1,30 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create comment schema
-const commentSchema = new Schema({
-    
-comments:  {
-            _id: ObjectId,
-            discussion_id: ObjectId,
-            slug: '34db',
-            posted: ISODateTime,
-            author: {
-                    id: ObjectId,
-                    name: ''
-                    },
-            text: ''
-            }
+const commentsSchema = new Schema({
+  discussion_id: {
+    type: String,
+  },
+  posted: {
+    type: Date,
+    default: new Date(),
+  },
+  text: {
+    type: String,
+    default: "",
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  rating: {
+    type: Number,
+    required: true,
+  },
 });
 
-module.exports = Comments = mongoose.model('comments', commentsSchema);
-
+module.exports = mongoose.model("comments", commentsSchema);
 
 // const mongoose = require('mongoose');
 // const Schema = mongoose.Schema;
