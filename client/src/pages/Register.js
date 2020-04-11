@@ -60,7 +60,7 @@ const Register = () => {
 					<input
 						type="text"
 						onChange={e => setName(e.target.value)}
-						id="register"
+						id="reg"
 						name="name"
 						placeholder="Jon Snow"
 						required
@@ -74,7 +74,7 @@ const Register = () => {
 					<input
 						type="email"
 						onChange={e => setEmail(e.target.value)}
-						id="register"
+						id="reg"
 						name="email"
 						placeholder="jon.snow@thewall.com"
 						required
@@ -88,7 +88,7 @@ const Register = () => {
 					<input
 						type="text"
 						onChange={e => setUserId(e.target.value)}
-						id="register"
+						id="reg"
 						name="userid"
 						placeholder="jon123"
 						required
@@ -102,7 +102,7 @@ const Register = () => {
 					<input
 						type="password"
 						onChange={e => setPassword(e.target.value)}
-						id="register"
+						id="reg"
 						name="password"
 						minLength="8"
 						required
@@ -116,7 +116,7 @@ const Register = () => {
 					<input
 						type="text"
 						onChange={e => setAddress(e.target.value)}
-						id="register"
+						id="reg"
 						name="homeAddress"
 						placeholder="1234 The Wall"
 						required
@@ -130,7 +130,7 @@ const Register = () => {
 					<input
 						type="text"
 						onChange={e => setNickname(e.target.value)}
-						id="register"
+						id="reg"
 						name="nickname"
 						placeholder="Jonny"
 						required

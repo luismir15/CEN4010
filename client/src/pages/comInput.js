@@ -44,16 +44,3 @@ class comInput extends Component {
 
 export default comInput
 
-
-//  <div class="col-md-6">
-//  <div class="form-group">
-//      <label for="name">
-//          Message</label>
-//      <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-//          placeholder="Message"></textarea>
-//  </div>
-// </div>
-// <div class="col-md-12">
-//  <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-//      Send Message</button>
-// </div>
