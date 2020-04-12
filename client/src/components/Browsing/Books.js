@@ -34,7 +34,7 @@ class Books extends Component {
         })
     }
 
-    handleSubmitOfTen = (e) => {
+    handleSubmitOfTen = () => {
         request
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: this.state.searchField, maxResults: 10 })
@@ -44,7 +44,7 @@ class Books extends Component {
         })
     }
 
-    handleSubmitOfTwenty = (e) => {
+    handleSubmitOfTwenty = () => {
         request
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: this.state.searchField, maxResults: 20 })
@@ -104,15 +104,24 @@ class Books extends Component {
           return;
         })
 
-        const pageLenght = this.state.books.sort((a, b) => {
-            if(this.state.page === 'Ten'){
+        const pageLenght = this.state.books.map(() => {
+            if(this.state.page =='Ten'){
                 return this.handleSubmitOfTen();
             }
-            else if(this.state.page === 'Twenty'){
+            else if(this.state.page == 'Twenty'){
                 return this.handleSubmitOfTwenty();
             }
-            return;
-        })
+        });
+
+        {/*const pageLenght = this.state.books.sort((a, b) => {
+            if(this.state.books =='Ten'){
+                return this.handleSubmitOfTen();
+            }
+            else if(this.state.books == 'Twenty'){
+                return this.handleSubmitOfTwenty();
+            }
+        return;
+        })*/}
 
         return (
             <div className="wrapper">
