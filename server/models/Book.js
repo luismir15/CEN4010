@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create schema
@@ -65,4 +65,4 @@ const BookSchema = new Schema({
 	}
 });
 
-module.exports = Book = mongoose.model('book', BookSchema);
+module.exports = Book = mongoose.model("book", BookSchema);

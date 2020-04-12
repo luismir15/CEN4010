@@ -1,183 +1,75 @@
 import React, { Component } from "react";
+import "../index.css";
+import { connect } from "react-redux";
+import { getWishLists, deleteWishList } from "../actions/wishlistActions";
+import { addToCart } from "../actions/cartAction";
 
-
-  {/* <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ----------> */}
-
-
-// $(document).ready(function() {
-//   $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-//   $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-// });
-
- 
+//library of purchased books
 class Library extends Component {
+  async componentDidMount() {
+    try {
+      await this.props.getWishLists();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  //library form
   render() {
+    const { wishLists } = this.props;
     return (
-
-      
-<div>
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 my-3">
-              <div class="pull-right">
-                  <div class="btn-group" >
-                      <button class="btn btn-info" id="list">
-                          List View
-                      </button>
-                      <button class="btn btn-danger" id="grid">
-                          Grid View
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div> 
-      <div id="products" class="row view-group" >
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item col-xs-4 col-lg-4">
-                      <div class="thumbnail card">
-                          <div class="img-event">
-                              <img class="group list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt="" />
-                          </div>
-                          <div class="caption card-body">
-                              <h4 class="group card-title inner list-group-item-heading">
-                                  Product title</h4>
-                              <p class="group inner list-group-item-text">
-                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                              <div class="row">
-                                  <div class="col-xs-12 col-md-6">
-                                      <p class="lead">
-                                          $21.000</p>
-                                  </div>
-                                  <div class="col-xs-12 col-md-6">
-                                      <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Library</h1>
           </div>
         </div>
+        {wishLists.map((wishList) => (
+          <div id="products" key={wishList._id} class="row view-group mb-5">
+            <div class="item col-xs-12 col-lg-12">
+              <div class="card">
+                <div className="row">
+                  <div className="col-lg-2 col-md-2 col-xs-2">
+                    <div class="img-event">
+                      <img
+                        class="img img-fluid"
+                        src={`${wishList.thumbnailUrl}`}
+                        alt=""
+                      />
+                    </div>
+                   </div>
+                  <div className="col-lg-10 col-md-10 col-xs-10 d-flex align-items-center">
+                    <div class="caption card-body">
+                      <h4 class="group card-title inner list-group-item-heading">
+                        {wishList.title}
+                      </h4>
+                      <p class="group inner list-group-item-text">
+                        {wishList.shortDescription}
+                      </p>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     );
   }
 }
- 
-export default Library;
+//mapping state to props
+const mapStateToProps = (state) => {
+  // console.log(state.wishLists.wishlists);
+  return {
+    wishLists: state.wishLists.wishlists,
+    carts: state.carts.carts,
+  };
+};
+//mapping dispatch to props
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getWishLists: () => dispatch(getWishLists()),
+    deleteWishList: (id) => dispatch(deleteWishList(id)),
+    addToCart: (data) => dispatch(addToCart(data)),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Library);
