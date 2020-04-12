@@ -140,9 +140,9 @@ ul.header li a {
   color: rgb(244, 244, 244);
 }
 
-/*^^ Miguel M. Contribution ends here ^^*/
+/*^^ Miguel M. Home page ends here ^^*/
 
-/**********BOOK DETAILS CSS********************/
+/**********BOOK DETAILS CSS************/
 
 .details {
   font-family: Lato;
@@ -161,7 +161,7 @@ ul.header li a {
 .details-Basics {
 }
 
-/*********************************************/ /**********BOOK DETAILS CSS********************/
+/*************BOOK DETAILS CSS*********/
 
 .details {
 }
@@ -213,9 +213,9 @@ ul.header li a {
   float: right;
 }
 
-/*********************************************/
+/**********************************/
 
-/* --------------------Miguel For book Rating------------- */
+/* ----------Miguel For book Rating------------- */
 
 * {
   margin: 0;
@@ -257,7 +257,7 @@ ul.header li a {
   color: #c59b08;
 }
 
-/* --------------Miguel For comments-------------- */
+/* --------------Miguel For comments------------- */
 body {
   background-color: #ffcc00;
 }
@@ -290,11 +290,6 @@ body {
   height: 100px;
   border: 1px solid #cecece;
 }
-
-/* background-color: #ffcc00;
-  padding: 25px 50px 25px 50px;
-  margin-top: 10px;
-  margin-bottom: 10px; */
 
 /****    Rating Stars     ***/
 .raterater-bg-layer {
@@ -384,10 +379,12 @@ body {
   background: #101010;
   color: #fff;
   border-radius: 0px;
+  border-bottom: none;
 }
 .jumbotron-sm {
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: none;
 }
 .jumbotron small {
   color: #fff;
@@ -395,54 +392,11 @@ body {
 .h1 small {
   font-size: 24px;
 }
-
-/* ------------------Eugenio Login/Register---------------------- */
-#registration {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-#login {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-.registerlink {
-  text-align: center;
-}
-
-.loginlink {
-  text-align: center;
-}
-
-#reg {
-  width: 15%;
-  position: relative;
-  padding: 12px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: normal;
-  box-shadow: 0px 4px 20px 0px transparent;
-}
-
-.submit {
-  background-color: #ffcc00;
-  border: none;
-  color: black;
-  padding: 5px 80px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.submit:hover {
-  background-color: #dcb000;
-}
+.header_main {
+  border-bottom: none !important;;
+  }
 
 /* ------------------Carlos ShopCart ---------------------- */
-
 .cartDetails {
   outline: 20px blue;
 }
@@ -480,70 +434,4 @@ p.total {
 
 .flexbox-item-1 {
   max-height: 300px;
-}
-
-/* ------------------Jessica Wishlist ---------------------- */
-
-/* .view-group {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	padding-left: 0;
-	margin-bottom: 0;
-  }
-  .thumbnail
-  {
-	margin-bottom: 30px;
-	padding: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-  }
-  
-  .item.list-group-item
-  {
-	float: none;
-	width: 100%;
-	background-color: #fff;
-	margin-bottom: 30px;
-	-ms-flex: 0 0 100%;
-	flex: 0 0 100%;
-	max-width: 100%;
-	padding: 0 1rem;
-	border: 0;
-  }
-  .item.list-group-item .img-event {
-	float: left;
-	width: 30%;
-  }
-  
-  .item.list-group-item .list-group-image
-  {
-	margin-right: 10px;
-  }
-  .item.list-group-item .thumbnail
-  {
-	margin-bottom: 0px;
-	display: inline-block;
-  }
-  .item.list-group-item .caption
-  {
-	float: left;
-	width: 70%;
-	margin: 0;
-  }
-  
-  .item.list-group-item:before, .item.list-group-item:after
-  {
-	display: table;
-	content: " ";
-  }
-  
-  .item.list-group-item:after
-  {
-	clear: both;
-  } */
-.form-check-label {
-  margin-left: 18px !important;
 }

@@ -47,7 +47,8 @@ class WishList extends Component {
                       <p class="lead float-left mt-4">${wishList.price}</p>
                       <p className="float-right mt-4">
                         <button
-                          class="btn btn-success"
+                          starRatedColor="##D3D3D3"  
+                          class="btn btn-dark"
                           onClick={async () => {
                             await addToCart(wishList);
                           }}
@@ -55,7 +56,7 @@ class WishList extends Component {
                           Add to cart
                         </button>
                         <button
-                          className="btn btn-danger"
+                          className="btn btn-warning"
                           onClick={async () => {
                             // Delete the wish list
                             await this.props.deleteWishList(wishList._id);

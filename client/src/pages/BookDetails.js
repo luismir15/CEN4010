@@ -227,10 +227,6 @@ class BookDetails extends React.Component {
               <CommentForm submit={this.handleSubmitReview} />
             </div>
           )}
-          {/* <div> */}
-          {/* book comments  rendered here*/}
-          {/* <Comments /> */}
-          {/* </div> */}
         </Row>
       </Container>
     );

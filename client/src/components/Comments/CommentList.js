@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import Comment from "./Comment";
 
-
+//Get the comment list and render 
 export default class CommentList extends Component {
   render() {
     const { comments } = this.props;

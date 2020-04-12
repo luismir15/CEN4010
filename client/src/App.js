@@ -10,7 +10,6 @@ import Profile from "./pages/Profile";
 import Help from "./pages/Help";
 import ShopCart from "./pages/ShopCart";
 import { Route, HashRouter, NavLink } from "react-router-dom";
-// React Redux
 import { Provider } from "react-redux";
 import store from "./store";
 // NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
@@ -19,10 +18,12 @@ import store from "./store";
 //Do not push updates to master branch, push to your own branch PLZ
 
 //updated file structure on my branch (miguel) 2/17/20
-//npm install after downloading/ npm install --save react-bootstrap mighe be needed for BookDetails to work
+//npm install after downloading/ npm install --save react-bootstrap might be needed for BookDetails to work
 // npm install react-router-dom --save to fix initial error
 //npm npm run client to run this package
 
+
+//Home page Navbar and links
 const App = () => (
   <Provider store={store}>
     <HashRouter>

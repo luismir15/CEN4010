@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import StarRatings from "react-star-ratings";
 
-
+//Review container with review box & options
 export default class Comments extends Component {
   state = {
     text: "",

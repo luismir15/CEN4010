@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Create comment schema
+// Create Rating schema
 const ratingSchema = new Schema({
 
 
@@ -28,7 +28,3 @@ const ratingSchema = new Schema({
 });
 
 module.exports = Rating = mongoose.model('rating', ratingSchema);
-
-
-// https://stackoverflow.com/questions/26914380/schema-for-user-ratings-key-value-db
-// https://www.digitalocean.com/community/tutorials/getting-started-with-the-mern-stack

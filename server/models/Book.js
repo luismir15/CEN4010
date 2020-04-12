@@ -36,15 +36,15 @@ const BookSchema = new Schema({
     required: true
   },
   authors: {
-    type: String,
+    type: Array,
     required: true
   },
   categories: {
-    type: String,
+    type: Array,
     required: true
   },
   genre: {
-    type: String,
+    type: Array,
     required: true
   },
   price: {

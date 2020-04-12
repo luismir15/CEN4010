@@ -1,7 +1,7 @@
 import React from "react";
 import StarRatings from "react-star-ratings";
 
-
+//comment containers and defaults
 export default function Comment(props) {
   const { name, text, rating, posted } = props.comment;
   return (
@@ -9,7 +9,7 @@ export default function Comment(props) {
       <div class="col-md-3 text-center">
         <img
           class="rounded-circle reviewer"
-          src="https://drive.google.com/uc?id=1HRgRJ-wOZAn2uCWtOYLwTz774jUYHlro"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEFF6tCXWJuWRLxP0Ovu785xFo3oiw_kKf0ZRJCIGH0jbIFvo1&usqp=CAU"
         />
         <div class="caption">
           <small>
@@ -18,7 +18,6 @@ export default function Comment(props) {
         </div>
       </div>
       <div class="col-md-9">
-        {/* <h3>Greatest book I've read</h3> */}
         <div class="ratebox text-center" data-id="0" data-rating="5"></div>
         <p>
           <StarRatings

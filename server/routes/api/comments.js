@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const comments = require("../../models/Comments");
 
+// @route GET api/Comments
+// @desc Gets all the Comments within the database
 router.get("/Comments", (req, res, next) => {
   //this will return all the data, exposing only the id and action field to the client
   comments
@@ -23,6 +25,8 @@ router.post("/", (req, res, next) => {
   //   }
 });
 
+// @route DELETE api/Comments/:userId/:id
+// @desc DELETE the comment within the database
 router.delete("/Comments/:id", (req, res, next) => {
   comments
     .findOneAndDelete({ _id: req.params.id })

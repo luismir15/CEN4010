@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import '../index.css';
 
+
+//simple contact page, not functional for nows
 class Help extends Component {
   render() {
     return (
-
-        <div>
-        <div class="jumbotron jumbotron-sm">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12 col-lg-12">
-                      <h1 class="h1">
-                          Need Help? <small>Contact us</small></h1>
+ <div>
+    <div class="jumbotron jumbotron-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <h1 class="h1">
+                            Need Help? Contact us</h1>
                   </div>
               </div>
           </div>
@@ -30,7 +31,7 @@ class Help extends Component {
                               </div>
                               <div class="form-group">
                                   <label for="email">
-                                      Email Address</label>
+                                    Email Address</label>
                                   <div class="input-group">
                                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                       </span>
