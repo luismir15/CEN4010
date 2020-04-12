@@ -23,6 +23,23 @@ router.get("/:id", (req, res) => {
   });
 });
 
+router.get('/author/:authorName', (req, res) => {
+	Book.find({"authors":req.params.authorName}, (error, book) => {
+		// console.log(book);
+		// 	res.json(book);
+
+			if (error) {
+				console.log(error)
+			}
+
+			else {
+				console.log(book);
+					res.json(book);
+			}
+
+	});
+});
+
 // @route POST api/books
 // @desc Create a book
 // @access Private
