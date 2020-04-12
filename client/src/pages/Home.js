@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import Books from '../components/Browsing/Books';
-import '../components/Browsing/Browsing.css';
 import { connect } from "react-redux";
 
 
@@ -26,9 +24,6 @@ class Home extends React.Component {
 render(){
   return(
     <div>
-        <div className="Browsing">
-          <Books/>
-        </div>
         <ul className="flexbox-container">
         {this.state.books.map((book)=>(
           <li>
@@ -37,8 +32,12 @@ render(){
                   <div className="flexbox-item flexbox-item-3">
                     <img className="fit-container" src={book.thumbnailUrl}/>
                   </div>
-                  <p>{book.title}</p>
+                  <h3>{book.title}</h3>
                   <p>by {book.authors}</p>
+                  <p>Genre: {book.genre}</p>
+                  <p>Price: {book.price}</p>
+                  <p>Raiting: {book.rating}</p>
+                  <p>Published: {book.publishedDate}</p>
               </div>
             </NavLink>
           </li>
