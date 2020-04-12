@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create schema
@@ -7,55 +7,27 @@ const BookSchema = new Schema({
 		type: String,
 		required: true
 	},
-	isbn: {
+	author: {
 		type: String,
 		required: true
 	},
-	pageCount: {
-		type: Number,
-		required: true
-	},
-	publishedDate: {
+	authorBio: {
 		type: String,
 		required: true
 	},
-	thumbnailUrl: {
+	description: {
 		type: String,
-		required: true
-	},
-	shortDescription: {
-		type: String,
-		required: true
-	},
-	longDescription: {
-		type: String,
-		required: true
-	},
-	status: {
-		type: String,
-		required: true
-	},
-	authors: {
-		type: Array,
-		required: true
-	},
-	categories: {
-		type: Array,
 		required: true
 	},
 	genre: {
 		type: String,
 		required: true
 	},
-	price: {
-		type: Number,
-		required: true
-	},
-	authBio: {
+	publisher: {
 		type: String,
 		required: true
 	},
-	publisher: {
+	releaseDate: {
 		type: String,
 		required: true
 	},
@@ -65,4 +37,4 @@ const BookSchema = new Schema({
 	}
 });
 
-module.exports = Book = mongoose.model("book", BookSchema);
+module.exports = Book = mongoose.model('book', BookSchema);
