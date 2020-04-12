@@ -1,7 +1,8 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import axios from "axios";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 import { connect } from "react-redux";
+
 
 class Home extends React.Component {
   constructor(props) {
@@ -20,29 +21,30 @@ class Home extends React.Component {
     });
   }
 
-  render() {
-    return (
-      <div>
+render(){
+  return(
+    <div>
         <ul className="flexbox-container">
-          {this.state.books.map((book) => (
-            <li>
-              <NavLink
-                to={`/Book/${book._id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <div className="book-wrapper">
+        {this.state.books.map((book)=>(
+          <li>
+            <NavLink to={`/Book/${book._id}`} style={{ textDecoration: 'none' }}>
+              <div className="book-wrapper">
                   <div className="flexbox-item flexbox-item-3">
-                    <img className="fit-container" src={book.thumbnailUrl} />
+                    <img className="fit-container" src={book.thumbnailUrl}/>
                   </div>
-                  {book.title}
+                  <h3>{book.title}</h3>
                   <p>by {book.authors}</p>
-                </div>
-              </NavLink>
-            </li>
-          ))}
+                  <p>Genre: {book.genre}</p>
+                  <p>Price: {book.price}</p>
+                  <p>Raiting: {book.rating}</p>
+                  <p>Published: {book.publishedDate}</p>
+              </div>
+            </NavLink>
+          </li>
+        ))}
         </ul>
-      </div>
-    );
-  }
+    </div>
+  );
+};
 }
 export default connect(null)(Home);

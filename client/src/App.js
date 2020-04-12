@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import Home from "./pages/Home";
+import TopSel from "./pages/TopSel";
 import Register from "./pages/Register";
 import Library from "./pages/Library";
 import WishList from "./pages/WishList";
@@ -45,13 +46,17 @@ const App = () => (
             </NavLink>
           </li>
 
-          {/* search bar*/}
+          {/* search bar
           <input type="text" />
-          <button type="submit">Submit</button>
+          <button type="submit">Submit</button>*/}
 
           {/* search bar with database integration built*/}
           {/* <input onchange={this.props.handleSearch} type="text"/>
          		 <button type="submit">Submit</button> */}
+          
+          <li>
+            <NavLink to="/TopSel">Top Seller</NavLink>
+          </li>
 
           <li>
             <NavLink to="/Library">Library</NavLink>
@@ -91,6 +96,7 @@ const App = () => (
           <Route path="/Help" component={Help} />
           <Route path="/ShopCart" component={ShopCart} />
           <Route path="/Author/:authorName" component={AuthorView}/>
+          <Route path="/TopSel" component={TopSel}/>
 
         </div>
       </div>
