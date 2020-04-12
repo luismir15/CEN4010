@@ -13,7 +13,6 @@ const UPDATE = 'UPDATE';
 
 const Profile = () => {
 	const [state, setState] = React.useState(DEFAULT);
-	const [creditCards, setCreditCards] = React.useState([]);
 	const [user, setUser] = React.useState({
 		creditCard1: null,
 		creditCard1Date: null,
@@ -41,17 +40,12 @@ const Profile = () => {
 					{
 						data: { user: fetchedUser },
 					},
-					{
-						data: { creditCards: fetchedCreditCards },
-					},
 				] = await Promise.all([
 					axios.get(`http://localhost:3002/api/users?userId=${loggedIn}`),
-					axios.get(`http://localhost:3002/api/creditCards?userId=${loggedIn}`),
 				]);
 
-				if (fetchedUser && fetchedCreditCards) {
+				if (fetchedUser) {
 					setUser(fetchedUser);
-					setCreditCards(fetchedCreditCards);
 					setState(AUTHED);
 				} else {
 					setState(ERROR);
@@ -71,13 +65,7 @@ const Profile = () => {
 				</div>
 			);
 		case AUTHED:
-			return (
-				<AuthedProfile
-					onClickUpdate={onClickUpdate}
-					user={user}
-					creditCards={creditCards}
-				/>
-			);
+			return <AuthedProfile onClickUpdate={onClickUpdate} user={user} />;
 		case UPDATE:
 			return <ProfileForm user={user} />;
 		case ERROR:

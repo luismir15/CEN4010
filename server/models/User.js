@@ -1,57 +1,56 @@
 const { Schema, model } = require('mongoose');
-const { CreditCard } = require('./CreditCard');
 // Create schema
 
 const UserSchema = new Schema({
 	name: {
 		type: String,
-		required: true,
+		required: true
 	},
 	email: {
 		type: String,
 		required: true,
-		unique: true,
+		unique: true
 	},
 	userId: {
 		type: String,
-		required: true,
+		required: true
 	},
 	password: {
 		type: String,
-		required: true,
+		required: true
 	},
 	homeAddress: {
 		type: String,
-		required: true,
+		required: true
 	},
 	nickname: {
 		type: String,
-		required: true,
+		required: true
 	},
 	creditCard1: {
 		type: Number,
-		required: false,
+		required: false
 	},
 	creditCard1Date: {
 		type: String,
-		required: false,
+		required: false
 	},
 	creditCard2: {
 		type: Number,
-		required: false,
+		required: false
 	},
 	creditCard2Date: {
 		type: String,
-		required: false,
+		required: false
 	},
 	shippingAddress1: {
 		type: String,
-		required: false,
+		required: false
 	},
 	shippingAddress2: {
 		type: String,
-		required: false,
-	},
+		required: false
+	}
 });
 
 module.exports = User = model('user', UserSchema);
