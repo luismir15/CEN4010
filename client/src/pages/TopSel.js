@@ -1,12 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import Books from '../components/Browsing/Books';
-import '../components/Browsing/Browsing.css';
 
 
-
-class Home extends React.Component {
+class TopSel extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +13,7 @@ class Home extends React.Component {
   }
 
 	componentDidMount() {
-		axios.get('http://localhost:3002/api/topseller').then(res => {
+		axios.get('http://localhost:3002/api/books').then(res => {
 			this.setState({
 				books: res.data
 			});
@@ -26,27 +23,25 @@ class Home extends React.Component {
 render(){
   return(
     <div>
-        <div className="Browsing">
-          <Books/>
-        </div>
-        <ul className="flexbox-container">
-        {this.state.books.map((book)=>(
-          <li>
-            <NavLink to={`/Book/${book._id}`} style={{ textDecoration: 'none' }}>
-              <div className="book-wrapper">
-                  <div className="flexbox-item flexbox-item-3">
-                    <img className="fit-container" src={book.thumbnailUrl}/>
-                  </div>
-                  <p>{book.title}</p>
-                  <p>by {book.authors}</p>
-              </div>
-            </NavLink>
-          </li>
-        ))}
-        </ul>
+          <ul className="flexbox-container">
+          {this.state.books.slice(15,24).map((book)=>(
+            <li>
+              <NavLink to={`/Book/${book._id}`} style={{ textDecoration: 'none' }}>
+                              <div className="book-wrapper">
+                                  <div className="flexbox-item flexbox-item-3">
+                                    <img className="fit-container" src={book.thumbnailUrl}/>
+                                  </div>
+                                  {book.title}
+                                  <p>by {book.authors}</p>
+
+                              </div>
+              </NavLink>
+            </li>
+          ))}
+          </ul>
     </div>
   );
 };
 }
 
-export default Home;
+export default TopSel;
