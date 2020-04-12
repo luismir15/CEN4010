@@ -66,7 +66,7 @@ class BookDetails extends React.Component {
                 <li>
                   Categories: {this.state.book.categories}</li>
                   <li>
-                    Rating: {this.state.book.rating}</li>
+                    {this.state.book.rating}</li>
               </ul>
 
                 <Button variant="primary" size="lg">ADD TO CART</Button>
