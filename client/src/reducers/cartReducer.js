@@ -2,10 +2,12 @@ import {
   ADD_TO_CART,
   GET_CART_ITEMS,
   DELETE_FROM_CART,
+  SAVE_FOR_LATER,
 } from "../actions/types";
 
 const initialState = {
   carts: [],
+  saved: [],
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -24,6 +26,12 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
       };
+    case SAVE_FOR_LATER:
+        return {
+          ...state,
+          carts: [...state.carts, action.payload],
+          saved: [...state.saved, action.payload],
+        };    
     default:
       return state;
   }

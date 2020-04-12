@@ -4,3 +4,4 @@ export const GET_WISHLIST = "GET_WISHLIST";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const DELETE_FROM_CART = "DELETE_FROM_CART";
 export const GET_CART_ITEMS = "GET_CART_ITEMS";
+export const SAVE_FOR_LATER = "SAVE_FOR_LATER";

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_CART_ITEMS, DELETE_FROM_CART } from "./types";
+import { ADD_TO_CART, GET_CART_ITEMS, DELETE_FROM_CART, SAVE_FOR_LATER } from "./types";
 import axios from "axios";
 
 // You will notice that I've hard coded the user id
@@ -30,4 +30,15 @@ export const deleteCartItem = (id) => async (dispatch) => {
   );
   if (res.data.success === 1)
     dispatch({ type: DELETE_FROM_CART, payload: res.data });
+};
+
+//Carlos add, save for later
+export const saveForLater = (data) => async (dispatch) => {
+  const userId = "1";
+  const res = await axios.post("http://localhost:3002/api/carts", {
+    data,
+    userId,
+  });
+  if (res.data.success === 1) dispatch({ type: SAVE_FOR_LATER, payload: data });
+  return res.data.success;
 };
