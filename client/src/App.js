@@ -12,6 +12,8 @@ import ShopCart from "./pages/ShopCart";
 import { Route, HashRouter, NavLink } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
+import AuthorView from "./pages/AuthorView";
+
 // NPM RUN CLIENT is the updated src folder, (NPM RUN SERVER/NPM START) runs build in my case which is the old green template
 //Use ctrL + C to stop the server
 //Always run NPM INSTALL on a newly cloned file
@@ -88,6 +90,8 @@ const App = () => (
           <Route path="/Profile" component={Profile} />
           <Route path="/Help" component={Help} />
           <Route path="/ShopCart" component={ShopCart} />
+          <Route path="/Author/:authorName" component={AuthorView}/>
+
         </div>
       </div>
     </HashRouter>
