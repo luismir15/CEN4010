@@ -5,7 +5,11 @@ import axios from 'axios';
 const ProfileForm = ({ user }) => {
 	const handleSubmit = async (e) => {
 		const loggedIn = localStorage.getItem('userId');
-		axios.put(`http://localhost:3002/api/users?userId=${loggedIn}`, input);
+		console.log('number');
+		await axios.put(
+			`http://localhost:3002/api/users?userId=${loggedIn}`,
+			input
+		);
 	};
 
 	const [input, setInput] = React.useState(user);

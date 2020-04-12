@@ -22,16 +22,15 @@ mongoose
 	.connect(db, {
 		useNewUrlParser: true,
 		useCreateIndex: true,
-		useUnifiedTopology: true,
+		useUnifiedTopology: true
 	})
 	.then(() => console.log('MongoDB Connected...'))
-	.catch((err) => console.log(err));
+	.catch(err => console.log(err));
 
 // Use Routes
 app.use('/api/books', require('./routes/api/books'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/creditCards', require('./routes/api/creditCards'));
 
 // Port for DB
 const port = process.env.PORT || 3002;

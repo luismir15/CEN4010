@@ -1,20 +1,14 @@
 import React from 'react';
 
 const DEFAULT = 'DEFAULT';
-const SHOWING_CREDIT_CARD_MODAL = 'SHOWING_CREDIT_CARD_MODAL';
 
-const AuthedProfile = ({ user, onClickUpdate, creditCards }) => {
+const AuthedProfile = ({ user, onClickUpdate }) => {
 	const [profileState, setProfileState] = React.useState(DEFAULT);
-	const [editingCreditCard, setEditingCreditCard] = React.useState(null);
 
 	const logout = async (e) => {
 		localStorage.removeItem('token');
 		localStorage.removeItem('userId');
 		window.location.reload();
-	};
-
-	const onClickAddCreditCard = () => {
-		setProfileState(SHOWING_CREDIT_CARD_MODAL);
 	};
 
 	return (
