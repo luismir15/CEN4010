@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import Home from './pages/Home';
+import TopSel from './pages/TopSel';
 import Register from './pages/Register';
 import Library from './pages/Library';
 import WishList from './pages/WishList';
@@ -52,7 +53,7 @@ const App = () => (
 
 
  				<li><NavLink to="/Library">Library</NavLink></li>
-
+				<li><NavLink to="/TopSel">Top Sellers</NavLink></li>
 
           		<li><NavLink to="/WishList">Wish List</NavLink></li>
 		  		{/* <li><NavLink to="/BookDetails">Book Details</NavLink></li> */}
@@ -83,6 +84,7 @@ const App = () => (
 				<Route path="/Profile" component={Profile} />
 				<Route path="/Help" component={Help} />
 				<Route path="/ShopCart" component={ShopCart} />
+				<Route path="/TopSel" component={TopSel} />
 			</div>
 		</div>
 	</HashRouter>

@@ -30,7 +30,9 @@ mongoose
 // Use Routes
 app.use('/api/books', require('./routes/api/books'));
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/topseller', require('./routes/api/topseller'));
 app.use('/api/auth', require('./routes/api/auth'));
+
 
 // Port for DB
 const port = process.env.PORT || 3002;
