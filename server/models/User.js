@@ -1,7 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
+const { Schema, model } = require('mongoose');
 // Create schema
+
 const UserSchema = new Schema({
 	name: {
 		type: String,
@@ -28,14 +27,30 @@ const UserSchema = new Schema({
 		type: String,
 		required: true
 	},
-	creditCards: {
-		type: Array,
-		default: []
+	creditCard1: {
+		type: Number,
+		required: false
 	},
-	shippingAddresses: {
-		type: Array,
-		default: []
+	creditCard1Date: {
+		type: String,
+		required: false
+	},
+	creditCard2: {
+		type: Number,
+		required: false
+	},
+	creditCard2Date: {
+		type: String,
+		required: false
+	},
+	shippingAddress1: {
+		type: String,
+		required: false
+	},
+	shippingAddress2: {
+		type: String,
+		required: false
 	}
 });
 
-module.exports = User = mongoose.model('user', UserSchema);
+module.exports = User = model('user', UserSchema);
