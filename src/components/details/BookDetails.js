@@ -2,6 +2,7 @@ import React from 'react';
 import {Container, Row, Col, Button, Image} from 'react-bootstrap';
 import Popup from 'reactjs-popup';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
 
 
 //useful for when you make calls to the api -- helps open a gateway to collect information
@@ -12,7 +13,7 @@ import axios from 'axios';
 class BookDetails extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.match.params);
+    // console.log(props.match.params);
     this.state = {
       id: props.match.params.id,
       book: {}
@@ -21,7 +22,7 @@ class BookDetails extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:4000/api/books/' + this.state.id).then((res) => {
       this.setState({book: res.data});
-      console.log(res.data);
+      // console.log(res.data);
     });
   }
   render() {
@@ -44,9 +45,11 @@ class BookDetails extends React.Component {
                 {this.state.book.title}
               </h1>
 
+              <Link to={`/Author/${this.state.book.authors}`}>
               <h3 className="center-it">
                 {this.state.book.authors}
               </h3>
+              </Link>
 
               <h2 className="center-it">
                 {this.state.book.price}

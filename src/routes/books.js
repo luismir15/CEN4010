@@ -20,8 +20,25 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
 	Book.findById(req.params.id, (error, book) => {
-		console.log(book);
+		// console.log(book);
 			res.json(book);
+	});
+});
+
+router.get('/author/:authorName', (req, res) => {
+	Book.find({"authors":req.params.authorName}, (error, book) => {
+		// console.log(book);
+		// 	res.json(book);
+
+			if (error) {
+				console.log(error)
+			}
+
+			else {
+				console.log(book);
+					res.json(book);
+			}
+
 	});
 });
 
