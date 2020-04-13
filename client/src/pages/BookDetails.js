@@ -5,6 +5,8 @@ import Rating from "./Rating";
 import StarRatings from "react-star-ratings";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import {Link} from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 //useful for when you make calls to the api -- helps open a gateway to collect information
@@ -127,11 +129,11 @@ class BookDetails extends React.Component {
       <Container className="details">
         <Row>
           <Col className="details-img-col">
-            <Image
-              className="details-img"
-              src={this.state.book.thumbnailUrl}
-              fluid
-            />
+             <Popup modal="modal" trigger={<Button className=" btn btn-primary img"> 
+                <Image className = "details-img-col"
+                src = { this.state.book.thumbnailUrl} />< /Button>} position="right center">
+                <Image className="details-img-zoom" src={this.state.book.thumbnailUrl}/>
+              </Popup>
           </Col>
 
           <Col className="details-Basics">
